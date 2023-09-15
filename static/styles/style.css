@@ -1,0 +1,70 @@
+Стилизация шапки сайта
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  main {
+    background-color: azure;
+    /* display: flex; */
+    justify-content: flex-start;
+    
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Стилизация заголовков секций и статей */
+  h2, h3 {
+    color: #333;
+  }
+  
+  article {
+    background-color: aqua;
+    height: 350px;
+    padding: 5px;
+    width: 75%;
+    margin-right: 2%;
+    display: flex;
+    
+  }
+  /* Стилизация боковой панели */
+  aside {
+    background-color: black;
+    display: flex;
+    height: 0;
+    padding: 15px;
+    border-radius: 5%;
+  }
+  
+  /* Стилизация подвала */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  /* Применение псевдоклассов для пунктов меню */
+  nav a:hover {
+    color: #ff0000; /* Измените цвет при наведении */
+  }
+  
+  /* Другие стили и оформление по вашему усмотрению */
