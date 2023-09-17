@@ -1,14 +1,12 @@
-/* Стили для шапки сайта */
 header {
-	background-color: #333; /* Цвет фона */
-	color: #fff; /* Цвет текста */
-	padding: 10px; /* Внутренние отступы */
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-/* Применение шрифта "Roboto" к заголовкам */
 h1,
 h2 {
 	font-family: 'Roboto', sans-serif;
@@ -16,8 +14,6 @@ h2 {
 
 nav ul {
 	list-style: none;
-	padding: 0;
-	margin: 0;
 }
 
 nav li {
@@ -29,14 +25,13 @@ nav a {
 	text-decoration: none;
 	font-size: 21px;
 	color: #fff;
-	transition: color 0.3s; /* Плавное изменение цвета при наведении */
+	transition: color 0.3s;
 }
 
 nav a:hover {
-	color: #ff6600; /* Цвет текста при наведении */
+	color: #ff6600;
 }
 
-/* Стили для основного контента */
 main {
 	max-width: 800px;
 	margin: 0 auto;
@@ -44,31 +39,24 @@ main {
 }
 
 section {
-	margin-bottom: 20px; /* Отступ между секциями */
-	border: 1px solid #ddd; /* Граница секции */
-	padding: 10px; /* Внутренние отступы */
+	margin-bottom: 20px;
+	border: 15px solid #dddddd;
+	padding: 10px;
 }
 
-/* Стили для боковой панели */
 aside {
-	/* background-color: #f0f0f0; /* Цвет фона */
-	padding: 10px;
+	background-color: #dddddd;
 	float: right;
 	width: 50%;
 	background-color: #f2f2f2;
 	padding: 10px;
 	border: 1px solid #ddd;
-	margin-left: 20px;
 }
 
-/* Стили для независимых секций в боковой панели */
 aside article {
 	border: 1px solid #ccc;
-	padding: 10px;
-	margin-bottom: 10px;
 }
 
-/* Стили для подвала сайта */
 footer {
 	background-color: #333;
 	color: #fff;
@@ -76,30 +64,12 @@ footer {
 	text-align: center;
 }
 
-/* Стили для ссылок в подвале */
 footer a {
-	color: #ff6600;
-	text-decoration: none;
+	color: #ffffff;
 	transition: color 0.3s;
 }
 
 footer a:hover {
-	color: #fff;
-}
-
-/* Стили для меню навигации */
-nav ul {
-	list-style: none;
-	padding: 0;
-}
-
-nav li {
-	display: inline;
-	margin-right: 20px;
-}
-
-/* Псевдоклассы для меню навигации */
-nav a:hover {
 	color: #ff6600;
 }
 
@@ -108,5 +78,5 @@ nav a:active {
 }
 
 nav a:visited {
-	color: #ffffff;
+	color: #a52a2a;
 }
