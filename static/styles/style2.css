@@ -28,10 +28,6 @@ nav a {
 	transition: color 0.3s;
 }
 
-nav a:hover {
-	color: #ff6600;
-}
-
 main {
 	max-width: 800px;
 	margin: 0 auto;
@@ -44,6 +40,26 @@ section {
 	padding: 10px;
 }
 
+section > dl > div {
+	background-color: #8c00ff;
+}
+
+article .combinator + p {
+	background-color: #b3ff00;
+}
+
+div a:hover {
+	color: #ff6600;
+}
+
+div a:visited {
+	color: #8c00ff;
+}
+
+div a:active {
+	color: #000;
+}
+
 aside {
 	background-color: #dddddd;
 	float: right;
@@ -53,8 +69,10 @@ aside {
 	border: 1px solid #ddd;
 }
 
-aside article {
-	border: 1px solid #ccc;
+article {
+    margin-bottom: 20px;
+	border: 15px solid #dddddd;
+	padding: 10px;
 }
 
 footer {
@@ -73,10 +91,6 @@ footer a:hover {
 	color: #ff6600;
 }
 
-nav a:active {
-	color: #000;
-}
-
-nav a:visited {
-	color: #a52a2a;
+nav a:hover {
+	color: #ff6600;
 }
