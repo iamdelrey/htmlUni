@@ -40,7 +40,7 @@ section {
 	padding: 10px;
 }
 
-section > dl > div {
+#art > div {
 	background-color: #8c00ff;
 }
 
@@ -70,7 +70,7 @@ aside {
 }
 
 article {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 	border: 15px solid #dddddd;
 	padding: 10px;
 }

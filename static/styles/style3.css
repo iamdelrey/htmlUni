@@ -10,49 +10,44 @@ header {
 	z-index: 100;
 }
 
-/* Добавляем стили для логотипа/названия веб-страницы */
-
 header img {
-	width: 70px; /* Установите желаемую ширину для логотипа */
-	height: auto; /* Поддерживаем соотношение сторон */
-	position: relative; /* Добавлено значение position: relative */
+	width: 70px;
+	height: auto;
+	position: relative;
 }
 
-/* Добавляем стили для навигации (меню сайта) */
-
 nav {
-    position: sticky;
-    top: 0;
-    background-color: #333; /* Цвет фона */
-    padding: 10px 0; /* Внутренний отступ сверху и снизу */
-    text-align: center; /* Выравнивание текста по центру */
+	position: relative;
+	top: 0;
+	background-color: #333;
+	padding: 10px 0;
+	text-align: center;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0; /* Убираем внутренний отступ у списка */
+	list-style: none;
+	padding: 0;
 }
 
 nav li {
-    display: inline;
-    margin-right: 20px;
+	display: inline;
+	margin-right: 20px;
 }
 
 nav a {
-    text-decoration: none;
-    font-size: 21px;
-    color: #fff;
-    transition: color 0.3s;
-    padding: 8px 12px; /* Внутренний отступ для каждого элемента меню */
-    border: 1px solid #fff; /* Граница */
-    border-radius: 5px; /* Закругленные углы */
+	text-decoration: none;
+	font-size: 21px;
+	color: #fff;
+	transition: color 0.3s;
+	padding: 8px 12px;
+	border: 1px solid #fff;
+	border-radius: 5px;
 }
 
 h1,
 h2 {
 	font-family: 'Roboto', sans-serif;
 }
-
 
 main {
 	max-width: 800px;
@@ -61,13 +56,12 @@ main {
 }
 
 section {
-    display: block;
+	display: block;
 	margin-bottom: 20px;
 	border: 15px solid #dddddd;
 	padding: 10px;
-	position: relative; /* Добавлено значение position: relative */
+	position: relative;
 }
-
 
 div a:hover {
 	color: #ff6600;
@@ -88,16 +82,16 @@ aside {
 	background-color: #f2f2f2;
 	padding: 10px;
 	border: 1px solid #ddd;
-	position: absolute; /* Добавлено значение position: absolute */
-	top: 10px; /* Отступ сверху */
-	right: 10px; /* Отступ справа */
+	position: absolute;
+	top: 80px;
+	right: 10px;
 }
 
 article {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 	border: 15px solid #dddddd;
 	padding: 10px;
-	position: relative; /* Добавлено значение position: relative */
+	position: relative;
 }
 
 footer {
@@ -117,32 +111,48 @@ footer a:hover {
 }
 
 nav a:hover {
-    color: #ff6600;
-    background-color: #fff; /* Изменение фона при наведении */
+	color: #ff6600;
+	background-color: #fff;
 }
 
 .content-block {
-    display: flex; /* Отображаем элементы как флекс-контейнер */
-    justify-content: space-between; /* Равномерное распределение пространства между элементами */
-    align-items: center; /* Выравнивание элементов по вертикали по центру */
-}
-  
-  .content-item {
-    flex: 1; /* Равномерное распределение доступной ширины между элементами */
-    padding: 10px; /* Внутренний отступ для элементов */
-    border: 1px solid #ddd; /* Граница для элементов */
-    text-align: center; /* Выравнивание текста по центру */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.float-right {
-    float: right; /* Обтекание справа */
-    margin: 0 0 10px 10px; /* Отступ справа и снизу, чтобы создать пространство между блоками */
-  }
-  
-  .float-left {
-    float: left; /* Обтекание слева */
-    margin: 0 10px 10px 0; /* Отступ слева и снизу, чтобы создать пространство между блоками */
-  }
-  
-  /* Остальные стили без изменений */
-  
+.content-item {
+	flex: 1;
+	padding: 10px;
+	border: 1px solid #ddd;
+	text-align: center;
+}
+
+.float-right img {
+	float: right;
+}
+
+.float-left img {
+	float: left;
+}
+
+.clear {
+	clear: both;
+}
+
+.float-right,
+.float-left {
+	height: 300px;
+}
+
+.advertisement-banner {
+	position: fixed;
+	top: 50;
+	left: 30px;
+	background-color: #ff6600;
+	color: #fff;
+	padding: 10px 20px;
+	font-size: 18px;
+	font-weight: bold;
+	z-index: 1000;
+}
