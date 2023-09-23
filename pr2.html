@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Моя первая страница</title>
+
+    <link rel="icon" href="static/images/fvcFinal.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="static/styles/style3.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="static/images/logo.jpg"
+        width="70"
+        alt="Modern art exhibition"
+      />
+      <nav>
+        <ul>
+          <li><a href="#home">Главная</a></li>
+          <li><a href="#exhibition">Выставка</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Выставка современного искусства</h1>
+      <p>
+        <strong>Добро пожаловать</strong> <i>на выставку</i>
+        <sub>современного</sub> <sup>искусства</sup>
+      </p>
+
+      <section id="home">
+        <h2>Содержание</h2>
+        <ol type="I">
+          <li><b>Живопись</b></li>
+          <li>Натюрморт</li>
+          <li>
+            Скульптура
+            <ul>
+              <li><i>Абстрактная скульптура</i></li>
+              <li><em>Фигуративная скульптура</em></li>
+              <li><u>Портретная скульптура</u></li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Термины</h2>
+        <dl>
+          <div>
+            <dt><abbr title="Абстрактное искусство">Абстракция</abbr></dt>
+            <dd>
+              <cite
+                >Стиль искусства, который не стремится изображать точное
+                представление внешнего мира</cite
+              >
+            </dd>
+          </div>
+          <dt><abbr title="Фигуративное искусство">Фигурация</abbr></dt>
+          <dd>
+            Стиль искусства, который преимущественно ориентирован на
+            реалистичное изображение объектов
+          </dd>
+
+          <dt>Акционизм</dt>
+          <dd>Искусство, которое заключается в действиях самого художника.</dd>
+          <dt>Нонконформизм</dt>
+          <dd>Искусство, противостоящее установкам официальной власти.</dd>
+        </dl>
+      </section>
+
+      <article>
+        <h2>Искусство акционизма</h2>
+        <img src="static/images/apple.jpg" width="200" alt="акционизм" />
+
+        <aside>
+          <div class="combinator">
+            <p>Искусство, которое заключается в действиях самого художника.</p>
+          </div>
+          <p>
+            Акционизм (от латинского «actio» — деятельность, действие, деяние)
+            сформировался в 1960-е годы в художественной среде Западной Европы.
+          </p>
+          <p>
+            В поисках новых способов самореализации художники стремились
+            превратить статичную выставку в некое действо, в котором могли
+            поучаствовать сами, и одновременно вовлечь зрителя в провокативный
+            динамический процесс — акцию.
+          </p>
+        </aside>
+      </article>
+
+      <section>
+        <h2>Книга о современном искусстве</h2>
+        <p>
+          Книга о современном искусстве Сьюзи Ходж
+          <cite>"Современное искусство в деталях"</cite>
+        </p>
+        <div>
+          <a
+            href="https://www.ozon.ru/product/sovremennoe-iskusstvo-v-detalyah-pochemu-pyatiletnemu-rebenku-ne-pod-silu-sdelat-podobnoe-217280134/?sh=oHOLFTLbUg"
+            target="_blank"
+            >Купить книгу</a
+          >
+        </div>
+      </section>
+
+      <section id="exhibition">
+        <h2>Галерея</h2>
+        <a href="http://resource.com">
+          <img src="static/images/artwork1.jpg" width="700" alt="Картина1" />
+        </a>
+        <img
+          src="static/images/kompoza.jpg"
+          width="700"
+          alt="Композиция"
+          usemap="#kompoza"
+        />
+
+        <map name="kompoza">
+          <area
+            shape="rect"
+            coords="275, 48, 408, 240"
+            href="https://xn--1-----8vefgeugb1aimdekb0alg1ambq6dd41a2a.xn--p1ai/shop/product/shkaf-kupe-elit-67"
+            alt="картина2"
+          />
+          <area
+            shape="circle"
+            coords="81, 311, 67"
+            href="https://style.rbc.ru/impressions/58f4a5fb9a7947b4ca771e88"
+            alt="унитаз"
+          />
+          <area
+            shape="poly"
+            coords="230, 288, 232, 212, 250, 180, 237, 151, 258, 136, 287, 157, 270, 181, 289, 290"
+            href="https://orelmeha.ru/raznoe-2/mark-kuinn-ria-novosti-sobytiya-v-moskve-rossii-i-mire-segodnya-temy-dnya-foto-video-infografika-radio.html"
+            alt="скульптура"
+          />
+        </map>
+      </section>
+    </main>
+
+    <section id="contact">
+      <h2>Контакты</h2>
+      <p>Свяжитесь с нами:</p>
+      <p>По телефону: <a href="tel:+79175138025">+7 (917) 513-80-25</a></p>
+      <p>
+        По электронной почте:
+        <a href="mailto:info@example.com">modern_art_exh@mail.ru</a>
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 The Museum of Modern Art</p>
+      <address>
+        <p>Адрес: г. Москва, ул. Моховая, 13</p>
+        <p>Телефон: <a href="tel:+79175138025">+7 (917) 513-80-25</a></p>
+      </address>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+/* Добавляем стили для логотипа/названия веб-страницы */
+
+header img {
+	width: 70px; /* Установите желаемую ширину для логотипа */
+	height: auto; /* Поддерживаем соотношение сторон */
+	position: relative; /* Добавлено значение position: relative */
+}
+
+/* Добавляем стили для навигации (меню сайта) */
+
+nav {
+	position: sticky;
+	top: 0;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav li {
+	display: inline;
+	margin-right: 20px;
+}
+
+nav a {
+	text-decoration: none;
+	font-size: 21px;
+	color: #fff;
+	transition: color 0.3s;
+}

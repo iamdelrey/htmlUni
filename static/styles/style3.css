@@ -1,13 +1,36 @@
-/* Стили для шапки сайта */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+/* Добавляем стили для логотипа/названия веб-страницы */
+
+header img {
+	width: 70px; /* Установите желаемую ширину для логотипа */
+	height: auto; /* Поддерживаем соотношение сторон */
+	position: relative; /* Добавлено значение position: relative */
+}
+
+/* Добавляем стили для навигации (меню сайта) */
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #333; /* Цвет фона */
+    padding: 10px 0; /* Внутренний отступ сверху и снизу */
+    text-align: center; /* Выравнивание текста по центру */
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
+    padding: 0; /* Убираем внутренний отступ у списка */
 }
 
 nav li {
@@ -17,53 +40,109 @@ nav li {
 
 nav a {
     text-decoration: none;
+    font-size: 21px;
     color: #fff;
+    transition: color 0.3s;
+    padding: 8px 12px; /* Внутренний отступ для каждого элемента меню */
+    border: 1px solid #fff; /* Граница */
+    border-radius: 5px; /* Закругленные углы */
 }
 
-/* Стили для основного контента */
+h1,
+h2 {
+	font-family: 'Roboto', sans-serif;
+}
+
+
 main {
-    margin: 20px;
-}
-
-h1 {
-    font-size: 24px;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
 }
 
 section {
-    margin-bottom: 20px;
+    display: block;
+	margin-bottom: 20px;
+	border: 15px solid #dddddd;
+	padding: 10px;
+	position: relative; /* Добавлено значение position: relative */
 }
 
-/* Стили для боковой панели */
+
+div a:hover {
+	color: #ff6600;
+}
+
+div a:visited {
+	color: #8c00ff;
+}
+
+div a:active {
+	color: #000;
+}
+
 aside {
-    float: right;
-    width: 30%;
-    background-color: #f2f2f2;
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin-left: 20px;
+	background-color: #dddddd;
+	float: right;
+	width: 50%;
+	background-color: #f2f2f2;
+	padding: 10px;
+	border: 1px solid #ddd;
+	position: absolute; /* Добавлено значение position: absolute */
+	top: 10px; /* Отступ сверху */
+	right: 10px; /* Отступ справа */
 }
 
 article {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+	border: 15px solid #dddddd;
+	padding: 10px;
+	position: relative; /* Добавлено значение position: relative */
 }
 
-/* Стили для пунктов меню в навигации */
-nav a:hover {
-    color: #ff9900;
-}
-
-nav a:active {
-    color: #ff0000;
-}
-
-nav a:visited {
-    color: #990099;
-}
-
-/* Стили для футера */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
 }
+
+footer a {
+	color: #ffffff;
+	transition: color 0.3s;
+}
+
+footer a:hover {
+	color: #ff6600;
+}
+
+nav a:hover {
+    color: #ff6600;
+    background-color: #fff; /* Изменение фона при наведении */
+}
+
+.content-block {
+    display: flex; /* Отображаем элементы как флекс-контейнер */
+    justify-content: space-between; /* Равномерное распределение пространства между элементами */
+    align-items: center; /* Выравнивание элементов по вертикали по центру */
+}
+  
+  .content-item {
+    flex: 1; /* Равномерное распределение доступной ширины между элементами */
+    padding: 10px; /* Внутренний отступ для элементов */
+    border: 1px solid #ddd; /* Граница для элементов */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.float-right {
+    float: right; /* Обтекание справа */
+    margin: 0 0 10px 10px; /* Отступ справа и снизу, чтобы создать пространство между блоками */
+  }
+  
+  .float-left {
+    float: left; /* Обтекание слева */
+    margin: 0 10px 10px 0; /* Отступ слева и снизу, чтобы создать пространство между блоками */
+  }
+  
+  /* Остальные стили без изменений */
+  
