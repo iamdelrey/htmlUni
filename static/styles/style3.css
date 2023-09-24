@@ -13,7 +13,7 @@ header {
 header img {
 	width: 70px;
 	height: auto;
-	position: relative;
+	position: sticky;
 }
 
 nav {
@@ -126,6 +126,7 @@ nav a:hover {
 	padding: 10px;
 	border: 1px solid #ddd;
 	text-align: center;
+	text-decoration: underline;
 }
 
 .float-right img {
