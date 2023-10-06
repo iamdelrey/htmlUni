@@ -6,7 +6,7 @@
     <title>Моя первая страница</title>
 
     <link rel="icon" href="static/images/fvcFinal.jpg" type="image/x-icon" />
-    <link rel="stylesheet" href="static/styles/style4.css" />
+    <link rel="stylesheet" href="static/styles/style5.css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -34,10 +34,6 @@
 
     <main>
       <h1>Выставка современного искусства</h1>
-      <p>
-        <strong>Добро пожаловать</strong> <i>на выставку</i>
-        <sub>современного</sub> <sup>искусства</sup>
-      </p>
 
       <section id="home">
         <h2>Содержание</h2>
@@ -54,8 +50,6 @@
           </li>
         </ol>
       </section>
-
-      <div class="advertisement-banner">Реклама</div>
 
       <section>
         <h2>Термины</h2>
@@ -84,9 +78,14 @@
 
       <article>
         <h2>Искусство акционизма</h2>
-        <img src="static/images/apple.jpg" width="200" alt="акционизм" />
-
-        <aside>
+        <div class="image-wrapper">
+          <img
+            src="static/images/apple.jpg"
+            style="width: 100%; max-width: 750px"
+            alt="акционизм"
+          />
+        </div>
+        <!-- <aside>
           <div class="combinator">
             <p>Искусство, которое заключается в действиях самого художника.</p>
           </div>
@@ -100,41 +99,23 @@
             поучаствовать сами, и одновременно вовлечь зрителя в провокативный
             динамический процесс — акцию.
           </p>
-        </aside>
+        </aside> -->
       </article>
 
-      <section id="exhibition">
+      <section id="exhibition" style="max-width: 100%">
         <h2>Галерея</h2>
-        <a href="http://resource.com">
-          <img src="static/images/artwork1.jpg" width="750" alt="Картина1" />
-        </a>
+
         <img
-          src="static/images/kompoza.jpg"
-          width="750"
-          alt="Композиция"
-          usemap="#kompoza"
+          src="static/images/artwork1.jpg"
+          style="width: 100%; max-width: 750px"
+          alt="Картина1"
         />
 
-        <map name="kompoza">
-          <area
-            shape="rect"
-            coords="275, 48, 408, 240"
-            href="https://xn--1-----8vefgeugb1aimdekb0alg1ambq6dd41a2a.xn--p1ai/shop/product/shkaf-kupe-elit-67"
-            alt="картина2"
-          />
-          <area
-            shape="circle"
-            coords="81, 311, 67"
-            href="https://style.rbc.ru/impressions/58f4a5fb9a7947b4ca771e88"
-            alt="унитаз"
-          />
-          <area
-            shape="poly"
-            coords="230, 288, 232, 212, 250, 180, 237, 151, 258, 136, 287, 157, 270, 181, 289, 290"
-            href="https://orelmeha.ru/raznoe-2/mark-kuinn-ria-novosti-sobytiya-v-moskve-rossii-i-mire-segodnya-temy-dnya-foto-video-infografika-radio.html"
-            alt="скульптура"
-          />
-        </map>
+        <img
+          src="static/images/kompoza.jpg"
+          style="width: 100%; max-width: 750px"
+          alt="Композиция"
+        />
       </section>
 
       <div class="clear"></div>
