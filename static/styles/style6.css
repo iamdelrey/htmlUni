@@ -236,7 +236,6 @@ html, body {
     min-height: 100px;
     background-color: #3E424B;
     color: #FAF6F2;
-    padding: 0 40px;
 }
 
 .nav{
@@ -282,8 +281,6 @@ html, body {
 
 .burger::after { bottom: 0 }
 
-
-/* Добавляем класс active для анимации иконки бургера */
 .burger.active span { transform: scale(0) }
 
 .burger.active::before{
@@ -296,7 +293,7 @@ html, body {
     transform: rotate(45deg) translate(0, 50%);
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
 	header {
 	  background-color: #333;
 	  color: #fff;
@@ -499,9 +496,75 @@ html, body {
     }
 }
 
-@keyframes burgerAnimation {
-    from {opacity: 0}
-    to {opacity: 1}
+.hidden-checkbox {
+	display: none;
+  }
+  
+  #menu-burger {
+	width: 25px;
+	height: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+	z-index: 2;
+	position: absolute;
+	position: fixed;
+	right: 16px;	
+}
+  
+.bar {
+	width: 100%;
+	height: 4px;
+	background-color: #ff6600;
+	transition: transform 0.3s ease;
+}
+  
+#menu-toggle:checked ~ #menu-burger .bar:nth-child(1) {
+	transform: rotate(45deg) translate(5.5px, 5.5px);
+}
+  
+#menu-toggle:checked ~ #menu-burger .bar:nth-child(2) {
+	transform: scaleX(0);
+	opacity: 0;
+	visibility: hidden;
+}
+
+#menu-toggle:checked ~ #menu-burger .bar:nth-child(3) {
+	transform: rotate(-45deg) translate(5.5px, -5.5px);
+}
+
+nav ul {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	list-style: none;
+	padding: 10px;
+	z-index: 1;
+}
+#menu-toggle:checked ~ nav ul {
+	display: block;
+}
+  
+@media (min-width: 768px) {
+	#menu-toggle {
+	  display: none;
+	}
+
+	.bar {
+		display: none; /* Скрываем блок .bar при ширине экрана менее 768px */
+	}
+  
+	nav ul {
+	  display: flex;
+	  position: static;
+	  background-color: transparent;
+	  border: none;
+	}
 }
 
 .gallery {

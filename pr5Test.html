@@ -16,25 +16,27 @@
   </head>
 
   <body>
-    <div class="wrapper">
-      <header class="header">
+    <div>
+      <header>
         <img
           src="static/images/logo.jpg"
           width="70"
           alt="Modern art exhibition"
           id="logo"
         />
-        <nav class="nav">
+        <input type="checkbox" id="menu-toggle" class="hidden-checkbox" />
+        <label for="menu-toggle" id="menu-burger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </label>
+        <nav>
           <ul>
             <li><a href="#home">Главная</a></li>
             <li><a href="#exhibition">Выставка</a></li>
             <li><a href="#contact">Контакты</a></li>
           </ul>
         </nav>
-
-        <div class="burger">
-          <span></span>
-        </div>
       </header>
     </div>
 
@@ -303,6 +305,23 @@
         frameborder="0"
         allowfullscreen
       ></iframe>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="static/images/image1.jpg" alt="Image 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="static/images/image2.jpg" alt="Image 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="static/images/image3.jpg" alt="Image 3" />
+        </div>
+        <div class="gallery-item">
+          <img src="static/images/image4.jpg" alt="Image 4" />
+        </div>
+        <div class="gallery-item">
+          <img src="static/images/image5.jpg" alt="Image 5" />
+        </div>
+      </div>
     </main>
 
     <section id="contact">
@@ -322,30 +341,5 @@
         <p>Телефон: <a href="tel:+79175138025">+7 (917) 513-80-25</a></p>
       </address>
     </footer>
-
-    <div class="gallery">
-      <div class="gallery-item">
-        <img src="static/images/image1.jpg" alt="Image 1" />
-      </div>
-      <div class="gallery-item">
-        <img src="static/images/image2.jpg" alt="Image 2" />
-      </div>
-      <div class="gallery-item">
-        <img src="static/images/image3.jpg" alt="Image 3" />
-      </div>
-      <div class="gallery-item">
-        <img src="static/images/image4.jpg" alt="Image 4" />
-      </div>
-      <div class="gallery-item">
-        <img src="static/images/image5.jpg" alt="Image 5" />
-      </div>
-    </div>
-
-    <script>
-      document.querySelector(".burger").addEventListener("click", function () {
-        this.classList.toggle("active");
-        document.querySelector(".nav").classList.toggle("open");
-      });
-    </script>
   </body>
 </html>
