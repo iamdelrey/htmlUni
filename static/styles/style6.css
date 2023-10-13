@@ -1,6 +1,6 @@
 header {
 	background-color: #333;
-	color: #fff;
+	color: #000000;
 	padding: 10px;
 	display: flex;
 	justify-content: space-between;
@@ -459,21 +459,6 @@ html, body {
 		width: 90%;
 	}
 
-	/* article {
-		display: flex;
-		flex-direction: column;
-		position: relative;
-	}
-	
-	aside {
-		position: absolute;
-		background-color: #dddddd;
-		width: 85%;
-		background-color: #f2f2f2;
-		padding: 10px;
-		border: 1px solid #ddd;
-	} */
-
 	.burger { display: flex }
 
     .nav{
@@ -596,3 +581,248 @@ nav ul {
       flex-basis: calc(100% - 20px);
     }
   }
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Размещаем кнопки по горизонтали по центру */
+    align-items: center; /* Размещаем кнопки по вертикали по центру */
+	margin: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Анимация изменения цвета фона */
+.button:hover {
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    transform: scale(1.05);
+}
+
+/* Стили для кнопки 2 */
+.button-2 {
+    background: linear-gradient(to bottom, #e74c3c, #c0392b);
+}
+
+/* Стили для кнопки 3 */
+.button-3 {
+    background: linear-gradient(to bottom, #2ecc71, #27ae60);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Анимация изменения размера и тени при наведении */
+.button-3:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для кнопки 4 */
+.button-4 {
+    background: linear-gradient(to bottom, #f39c12, #d35400);
+    position: relative;
+}
+
+.button-4 {
+    background: linear-gradient(to bottom, #e74c3c, #c0392b);
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button-4:hover {
+    background: linear-gradient(to bottom, #c0392b, #a9311d);
+    transform: scale(1.05);
+    animation: shake 0.5s ease infinite;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+
+/* Стили для уведомлений */
+.notification {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+	right: 48px;
+}
+
+.notification-icon {
+    font-size: 24px;
+}
+
+.notification-list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.notification-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notification-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s;
+}
+
+.notification-list li:last-child {
+    border-bottom: none;
+}
+
+.notification:hover .notification-list {
+    display: block;
+}
+
+.notification-list li:hover {
+    background-color: #f2f2f2; /* Цвет фона при наведении */
+}
+
+.notification-count {
+    background-color: #ff6600;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.card-container {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px;
+	overflow: hidden;
+}
+  
+.card {
+	flex: 1;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+	margin: 10px;
+}
+  
+.card .card-content {
+	position: relative;
+	overflow: hidden;
+	transition: transform 0.3s;
+
+}
+  
+.card img {
+	width: 100%;
+	height: 270px;
+	display: block;
+	object-fit: cover;
+}
+  
+.card:hover .card-content {
+	transform: scale(1.05);
+}
+  
+.card .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+  
+.card:hover .overlay {
+	opacity: 1;
+}
+  
+.card .overlay h3,
+.card .overlay p {
+	color: #fff;
+	margin: 0;
+	padding: 10px;
+}
+
+.card-1{
+	width: 100%;
+  	height: 100%;
+  	object-fit: cover; /* Изображение будет растягиваться или сжиматься, чтобы заполнить контейнер */
+  	display: block;
+}
+
+.video-container {
+	display: flex;
+	overflow: hidden;
+	background-color: #f2f2f2;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s;
+	margin: 20px;
+}
+  
+.video-container:hover {
+	transform: scale(1.05);
+}
+  
+.video {
+	flex: 1;
+	overflow: hidden;
+	position: relative;
+}
+  
+.video iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+  
+.caption {
+	flex: 1;
+	padding: 20px;
+	background-color: #fff;
+	display: none;
+	transition: opacity 0.3s;
+}
+  
+.caption h2 {
+	font-size: 24px;
+	margin: 0;
+}
+  
+.caption p {
+	font-size: 16px;
+	color: #555;
+}
+  
+.video-container:hover .caption {
+	display: block;
+}
