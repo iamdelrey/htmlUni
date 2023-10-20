@@ -1,315 +1,534 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Моя первая страница</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Моя первая страница</title>
+    <link rel="icon" href="static/images/fvcFinal.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="static/styles/style7.css" />
 
-  <link rel="icon" href="static/images/fvcFinal.jpg" type="image/x-icon" />
-  <link rel="stylesheet" href="static/styles/style7.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-</head>
-
-<body>
-  <div>
-    <header>
-      <img src="static/images/logo.jpg" width="70" alt="Modern art exhibition" id="logo" />
-      <input type="checkbox" id="menu-toggle" class="hidden-checkbox" />
-      <label for="menu-toggle" id="menu-burger">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </label>
-      <nav>
-        <ul>
-          <li><a href="#home">Главная</a></li>
-          <li><a href="#exhibition">Выставка</a></li>
-          <li><a href="#contact">Контакты</a></li>
-        </ul>
-      </nav>
-
-      <div class="notification">
-        <span class="notification-icon">🔔</span>
-        <span class="notification-count">3</span>
-        <div class="notification-list">
+  <body>
+    <div>
+      <header>
+        <img
+          src="static/images/logo.jpg"
+          width="70"
+          alt="Modern art exhibition"
+          id="logo"
+        />
+        <input type="checkbox" id="menu-toggle" class="hidden-checkbox" />
+        <label for="menu-toggle" id="menu-burger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </label>
+        <nav>
           <ul>
-            <li>Уведомление 1</li>
-            <li>Уведомление 2</li>
-            <li>Уведомление 3</li>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#exhibition">Выставка</a></li>
+            <li><a href="#contact">Контакты</a></li>
+            <li><a href="reg.html">Регистрация</a></li>
           </ul>
+        </nav>
+
+        <div class="notification">
+          <span class="notification-icon">🔔</span>
+          <span class="notification-count">3</span>
+          <div class="notification-list">
+            <ul>
+              <li>Уведомление 1</li>
+              <li>Уведомление 2</li>
+              <li>Уведомление 3</li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </header>
-  </div>
+      </header>
+    </div>
 
-  <main>
-    <h1>Выставка современного искусства</h1>
+    <main>
+      <h1>Выставка современного искусства</h1>
 
-    <section id="home">
-      <h2>Содержание</h2>
-      <ol type="I">
-        <li><b>Живопись</b></li>
-        <li>Натюрморт</li>
-        <li>
-          Скульптура
-          <ul>
-            <li><i>Абстрактная скульптура</i></li>
-            <li><em>Фигуративная скульптура</em></li>
-            <li><u>Портретная скульптура</u></li>
-          </ul>
-        </li>
-      </ol>
-    </section>
+      <section id="home">
+        <h2>Содержание</h2>
+        <ol type="I">
+          <li><b>Живопись</b></li>
+          <li>Натюрморт</li>
+          <li>
+            Скульптура
+            <ul>
+              <li><i>Абстрактная скульптура</i></li>
+              <li><em>Фигуративная скульптура</em></li>
+              <li><u>Портретная скульптура</u></li>
+            </ul>
+          </li>
+        </ol>
+      </section>
 
-    <section>
-      <h2>Термины</h2>
-      <dl>
-        <div>
-          <dt><abbr title="Абстрактное искусство">Абстракция</abbr></dt>
+      <section>
+        <h2>Термины</h2>
+        <dl>
+          <div>
+            <dt><abbr title="Абстрактное искусство">Абстракция</abbr></dt>
+            <dd>
+              <cite
+                >Стиль искусства, который не стремится изображать точное
+                представление внешнего мира</cite
+              >
+            </dd>
+          </div>
+          <dt><abbr title="Фигуративное искусство">Фигурация</abbr></dt>
           <dd>
-            <cite>Стиль искусства, который не стремится изображать точное
-              представление внешнего мира</cite>
+            Стиль искусства, который преимущественно ориентирован на
+            реалистичное изображение объектов
           </dd>
+
+          <dt>Акционизм</dt>
+          <dd>Искусство, которое заключается в действиях самого художника.</dd>
+          <dt>Нонконформизм</dt>
+          <dd>Искусство, противостоящее установкам официальной власти.</dd>
+        </dl>
+      </section>
+
+      <article>
+        <h2>Искусство акционизма</h2>
+        <div class="image-wrapper">
+          <img
+            src="static/images/apple.jpg"
+            style="width: 100%; max-width: 750px"
+            alt="акционизм"
+          />
         </div>
-        <dt><abbr title="Фигуративное искусство">Фигурация</abbr></dt>
-        <dd>
-          Стиль искусства, который преимущественно ориентирован на
-          реалистичное изображение объектов
-        </dd>
+      </article>
 
-        <dt>Акционизм</dt>
-        <dd>Искусство, которое заключается в действиях самого художника.</dd>
-        <dt>Нонконформизм</dt>
-        <dd>Искусство, противостоящее установкам официальной власти.</dd>
-      </dl>
-    </section>
+      <section id="exhibition" style="max-width: 100%">
+        <h2>Галерея</h2>
 
-    <article>
-      <h2>Искусство акционизма</h2>
-      <div class="image-wrapper">
-        <img src="static/images/apple.jpg" style="width: 100%; max-width: 750px" alt="акционизм" />
-      </div>
-    </article>
+        <img
+          src="static/images/artwork1.jpg"
+          style="width: 100%; max-width: 750px"
+          alt="Картина1"
+        />
 
-    <section id="exhibition" style="max-width: 100%">
-      <h2>Галерея</h2>
+        <img
+          src="static/images/kompoza.jpg"
+          style="width: 100%; max-width: 750px"
+          alt="Композиция"
+        />
+      </section>
 
-      <img src="static/images/artwork1.jpg" style="width: 100%; max-width: 750px" alt="Картина1" />
+      <div class="clear"></div>
 
-      <img src="static/images/kompoza.jpg" style="width: 100%; max-width: 750px" alt="Композиция" />
-    </section>
+      <section class="content-block">
+        <div class="content-item">!!!!!</div>
+        <div class="content-item">527568724</div>
+        <div class="content-item">таблица</div>
+      </section>
 
-    <div class="clear"></div>
+      <form method="post" action="/process_form">
+        <label for="text-input">Text Input:</label>
+        <input
+          type="text"
+          id="text-input"
+          name="text_input"
+          placeholder="Введите текст"
+          required
+        />
 
-    <section class="content-block">
-      <div class="content-item">!!!!!</div>
-      <div class="content-item">527568724</div>
-      <div class="content-item">таблица</div>
-    </section>
+        <br /><br />
 
-    <form method="post" action="/process_form">
-      <label for="text-input">Text Input:</label>
-      <input type="text" id="text-input" name="text_input" placeholder="Введите текст" required />
+        <label for="tel-input">Tel Input:</label>
+        <input
+          type="tel"
+          id="tel-input"
+          name="tel_input"
+          pattern="[0-9]{10}"
+          placeholder="Введите номер телефона"
+          required
+        />
 
-      <br /><br />
+        <br /><br />
 
-      <label for="tel-input">Tel Input:</label>
-      <input type="tel" id="tel-input" name="tel_input" pattern="[0-9]{10}" placeholder="Введите номер телефона"
-        required />
+        <label for="email-input">Email Input:</label>
+        <input
+          type="email"
+          id="email-input"
+          name="email_input"
+          placeholder="Введите email"
+          required
+        />
 
-      <br /><br />
+        <br /><br />
 
-      <label for="email-input">Email Input:</label>
-      <input type="email" id="email-input" name="email_input" placeholder="Введите email" required />
+        <label for="password-input">Password Input:</label>
+        <input
+          type="password"
+          id="password-input"
+          name="password_input"
+          minlength="8"
+          placeholder="Введите пароль"
+          required
+        />
 
-      <br /><br />
+        <br /><br />
 
-      <label for="password-input">Password Input:</label>
-      <input type="password" id="password-input" name="password_input" minlength="8" placeholder="Введите пароль"
-        required />
+        <label for="file-input">File Input:</label>
+        <input type="file" id="file-input" name="file_input" />
 
-      <br /><br />
+        <br /><br />
 
-      <label for="file-input">File Input:</label>
-      <input type="file" id="file-input" name="file_input" />
+        <input
+          type="checkbox"
+          id="checkbox-input"
+          name="checkbox-input"
+          checked
+        />
+        <label for="checkbox-input"
+          >Согласен с условиями пользовательского соглашения</label
+        ><br /><br />
 
-      <br /><br />
+        <label for="radio-input-1">Да</label>
+        <input
+          type="radio"
+          id="radio-input-1"
+          name="radio_group"
+          value="option1"
+          checked
+        />
 
-      <input type="checkbox" id="checkbox-input" name="checkbox-input" checked />
-      <label for="checkbox-input">Согласен с условиями пользовательского соглашения</label><br /><br />
+        <label for="radio-input-2">Нет</label>
+        <input
+          type="radio"
+          id="radio-input-2"
+          name="radio_group"
+          value="option2"
+        />
 
-      <label for="radio-input-1">Да</label>
-      <input type="radio" id="radio-input-1" name="radio_group" value="option1" checked />
+        <br /><br />
 
-      <label for="radio-input-2">Нет</label>
-      <input type="radio" id="radio-input-2" name="radio_group" value="option2" />
+        <label for="datetime-input">Datetime-Local Input:</label>
+        <input
+          type="datetime-local"
+          id="datetime-input"
+          name="datetime_input"
+          min="2023-01-01T00:00"
+          max="2030-12-31T23:59"
+        />
 
-      <br /><br />
+        <br /><br />
 
-      <label for="datetime-input">Datetime-Local Input:</label>
-      <input type="datetime-local" id="datetime-input" name="datetime_input" min="2023-01-01T00:00"
-        max="2030-12-31T23:59" />
+        <input type="submit" value="Submit" /><br /><br />
 
-      <br /><br />
+        <button type="button" id="button-input">Кнопка</button><br /><br />
 
-      <input type="submit" value="Submit" /><br /><br />
+        <label for="textarea-input">Текстовая область:</label><br />
+        <textarea
+          id="textarea-input"
+          name="textarea-input"
+          cols="40"
+          rows="5"
+          maxlength="20000"
+          minlength="10"
+          placeholder="Введите текст"
+          required
+        ></textarea
+        ><br /><br />
 
-      <button type="button" id="button-input">Кнопка</button><br /><br />
+        <fieldset>
+          <legend>Информация о художнике</legend>
+          <label for="artistName">Имя художника:</label>
+          <input type="text" id="artistName" name="artistName" required /><br />
+          <br />
 
-      <label for="textarea-input">Текстовая область:</label><br />
-      <textarea id="textarea-input" name="textarea-input" cols="40" rows="5" maxlength="20000" minlength="10"
-        placeholder="Введите текст" required></textarea><br /><br />
+          <label for="artworkTitle">Название произведения:</label>
+          <input
+            type="text"
+            id="artworkTitle"
+            name="artworkTitle"
+            required
+          /><br /><br />
 
-      <fieldset>
-        <legend>Информация о художнике</legend>
-        <label for="artistName">Имя художника:</label>
-        <input type="text" id="artistName" name="artistName" required /><br />
+          <label for="rating">Оценка (от 1 до 10):</label>
+          <input
+            type="number"
+            id="rating"
+            name="rating"
+            min="1"
+            max="10"
+          /><br /><br />
+
+          <label for="opinion">Ваше мнение:</label><br />
+          <textarea id="opinion" name="opinion" rows="4" cols="50"></textarea
+          ><br />
+        </fieldset>
         <br />
-
-        <label for="artworkTitle">Название произведения:</label>
-        <input type="text" id="artworkTitle" name="artworkTitle" required /><br /><br />
-
-        <label for="rating">Оценка (от 1 до 10):</label>
-        <input type="number" id="rating" name="rating" min="1" max="10" /><br /><br />
-
-        <label for="opinion">Ваше мнение:</label><br />
-        <textarea id="opinion" name="opinion" rows="4" cols="50"></textarea><br />
-      </fieldset>
+        <label for="artGenres">Выберите жанры современного искусства:</label
+        ><br />
+        <select id="artGenres" name="artGenres[]" multiple required size="4">
+          <option value="abstract">Абстрактное искусство</option>
+          <option value="surrealism">Сюрреализм</option>
+          <option value="pop">Поп-арт</option>
+          <option value="conceptual">Концептуальное искусство</option>
+          <option value="altermodern">Альтермодерн</option>
+          <option value="kitsch">Движение китча</option>
+          <option value="postmodern">Цифровое искусство</option>
+          <option value="metamodernism">Метамодернизм</option></select
+        ><br /><br />
+        <input type="submit" value="Отправить" />
+        <br />
+      </form>
       <br />
-      <label for="artGenres">Выберите жанры современного искусства:</label><br />
-      <select id="artGenres" name="artGenres[]" multiple required size="4">
-        <option value="abstract">Абстрактное искусство</option>
-        <option value="surrealism">Сюрреализм</option>
-        <option value="pop">Поп-арт</option>
-        <option value="conceptual">Концептуальное искусство</option>
-        <option value="altermodern">Альтермодерн</option>
-        <option value="kitsch">Движение китча</option>
-        <option value="postmodern">Цифровое искусство</option>
-        <option value="metamodernism">Метамодернизм</option>
-      </select><br /><br />
-      <input type="submit" value="Отправить" />
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d171385.5250545762!2d37.4124179508612!3d55.63967537861261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1696021131927!5m2!1sru!2sru"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
       <br />
-    </form>
-    <br />
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d171385.5250545762!2d37.4124179508612!3d55.63967537861261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1696021131927!5m2!1sru!2sru"
-      width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <br />
-    <br />
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/iW1-YayidD0" frameborder="0"
-      allowfullscreen></iframe>
-    <div class="gallery">
-      <div class="gallery-item">
-        <img src="static/images/image1.jpg" alt="Image 1" />
-      </div>
-      <div class="gallery-item">
-        <img src="static/images/image2.jpg" alt="Image 2" />
-      </div>
-      <div class="gallery-item">
-        <img src="static/images/image3.jpg" alt="Image 3" />
-      </div>
-      <div class="gallery-item">
-        <img src="static/images/image4.jpg" alt="Image 4" />
-      </div>
-      <div class="gallery-item">
-        <img src="static/images/image5.jpg" alt="Image 5" />
-      </div>
-    </div>
-
-    <div class="button-container">
-      <button class="button button-1">Button 1</button>
-      <button class="button button-2">Button 2</button>
-      <button class="button button-3">Button 3</button>
-      <button class="button button-4">Button 4</button>
-    </div>
-
-    <div class="video-container">
-      <div class="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/iW1-YayidD0" frameborder="0"
-          allowfullscreen></iframe>
-      </div>
-      <div class="caption">
-        <h2>ART MOSCOW</h2>
-        <p>
-          ART MOSCOW is a unique project, the only major fair that
-          harmoniously combines classical, modern and jewelry art of the
-          highest level within one exhibition space.
-        </p>
-      </div>
-    </div>
-
-    <div class="card-container">
-      <div class="box ">
-        <span></span>
-        <div class="content">
-          <h2>Карточка 1</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, voluptatem in. Error nihil reiciendis
-            aliquam, debitis, ratione magnam fugiat obcaecati necessitatibus, ex quibusdam porro modi delectus sunt.
-            Quo, voluptate reprehenderit?</p>
-          <a href="#">Подробнее</a>
+      <br />
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/iW1-YayidD0"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="static/images/image1.jpg" alt="Image 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="static/images/image2.jpg" alt="Image 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="static/images/image3.jpg" alt="Image 3" />
+        </div>
+        <div class="gallery-item">
+          <img src="static/images/image4.jpg" alt="Image 4" />
+        </div>
+        <div class="gallery-item">
+          <img src="static/images/image5.jpg" alt="Image 5" />
         </div>
       </div>
 
-      <div class="box ">
-        <span></span>
-        <div class="content">
-          <h2>Карточка 2</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, voluptatem in. Error nihil reiciendis
-            aliquam, debitis, ratione magnam fugiat obcaecati necessitatibus, ex quibusdam porro modi delectus sunt.
-            Quo, voluptate reprehenderit?</p>
-          <a href="#">Подробнее</a>
+      <div class="button-container">
+        <button class="button button-1">Button 1</button>
+        <button class="button button-2">Button 2</button>
+        <button class="button button-3">Button 3</button>
+        <button class="button button-4">Button 4</button>
+      </div>
+
+      <div class="video-container">
+        <div class="video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/iW1-YayidD0"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="caption">
+          <h2>ART MOSCOW</h2>
+          <p>
+            ART MOSCOW is a unique project, the only major fair that
+            harmoniously combines classical, modern and jewelry art of the
+            highest level within one exhibition space.
+          </p>
         </div>
       </div>
 
-      <div class="box ">
-        <span></span>
-        <div class="content">
-          <h2>Карточка 3</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, voluptatem in. Error nihil reiciendis
-            aliquam, debitis, ratione magnam fugiat obcaecati necessitatibus, ex quibusdam porro modi delectus sunt.
-            Quo, voluptate reprehenderit?</p>
-          <a href="#">Подробнее</a>
+      <div class="card-container">
+        <div class="box">
+          <span></span>
+          <div class="content">
+            <h2>Карточка 1</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto, voluptatem in. Error nihil reiciendis aliquam,
+              debitis, ratione magnam fugiat obcaecati necessitatibus, ex
+              quibusdam porro modi delectus sunt. Quo, voluptate reprehenderit?
+            </p>
+            <a href="#">Подробнее</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <span></span>
+          <div class="content">
+            <h2>Карточка 2</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto, voluptatem in. Error nihil reiciendis aliquam,
+              debitis, ratione magnam fugiat obcaecati necessitatibus, ex
+              quibusdam porro modi delectus sunt. Quo, voluptate reprehenderit?
+            </p>
+            <a href="#">Подробнее</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <span></span>
+          <div class="content">
+            <h2>Карточка 3</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto, voluptatem in. Error nihil reiciendis aliquam,
+              debitis, ratione magnam fugiat obcaecati necessitatibus, ex
+              quibusdam porro modi delectus sunt. Quo, voluptate reprehenderit?
+            </p>
+            <a href="#">Подробнее</a>
+          </div>
         </div>
       </div>
-    </div>
+      <div class="body-blur-card">
+        <div class="blur-card-container">
+          <div class="card">
+            <div class="circle">
+              <h2>01</h2>
+            </div>
+            <div class="content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                officia, qui veritatis, odit quae laboriosam, explicabo suscipit
+                adipisci aliquam exercitationem praesentium reiciendis. Nisi
+                aliquid commodi sed, officiis qui optio a!
+              </p>
+              <a href="#">Подробнее</a>
+            </div>
+          </div>
 
-  </main>
+          <div class="card">
+            <div class="circle">
+              <h2>02</h2>
+            </div>
+            <div class="content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                officia, qui veritatis, odit quae laboriosam, explicabo suscipit
+                adipisci aliquam exercitationem praesentium reiciendis. Nisi
+                aliquid commodi sed, officiis qui optio a!
+              </p>
+              <a href="#">Подробнее</a>
+            </div>
+          </div>
 
-  <section id="contact">
-    <h2>Контакты</h2>
-    <p>Свяжитесь с нами:</p>
-    <p>По телефону: <a href="tel:+79175138025">+7 (917) 513-80-25</a></p>
-    <p>
-      По электронной почте:
-      <a href="mailto:info@example.com">modern_art_exh@mail.ru</a>
-    </p>
-  </section>
-
-  <footer>
-    <p>&copy; 2023 The Museum of Modern Art</p>
-    <address>
-      <p>Адрес: г. Москва, ул. Моховая, 13</p>
-      <p>Телефон: <a href="tel:+79175138025">+7 (917) 513-80-25</a></p>
-    </address>
-
-    <div class="icons-container">
-      <div class="img1">
-        <img src="static/images/tgLogo.png">
+          <div class="card">
+            <div class="circle">
+              <h2>03</h2>
+            </div>
+            <div class="content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                officia, qui veritatis, odit quae laboriosam, explicabo suscipit
+                adipisci aliquam exercitationem praesentium reiciendis. Nisi
+                aliquid commodi sed, officiis qui optio a!
+              </p>
+              <a href="#">Подробнее</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="img2">
-        <img src="static/images/vkLogo.png">
-      </div>
+      <div class="body-snake-card">
+        <div class="snake-card-container">
+          <div class="card">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="content">
+              <h2>01</h2>
+              <h3>Заголовок 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est ad
+                quae reiciendis libero autem consequuntur hic esse et veritatis
+                laboriosam reprehenderit labore minus deleniti obcaecati, magni
+                eos pariatur, temporibus quis?
+              </p>
+              <a href="#">Подробнее</a>
+            </div>
+          </div>
 
-      <div class="img3">
-        <img src="static/images/instLogo.png">
-      </div>
-    </div>
-  </footer>
-</body>
+          <div class="card">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="content">
+              <h2>02</h2>
+              <h3>Заголовок 2</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est ad
+                quae reiciendis libero autem consequuntur hic esse et veritatis
+                laboriosam reprehenderit labore minus deleniti obcaecati, magni
+                eos pariatur, temporibus quis?
+              </p>
+              <a href="#">Подробнее</a>
+            </div>
+          </div>
 
+          <div class="card">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="content">
+              <h2>03</h2>
+              <h3>Заголовок 3</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est ad
+                quae reiciendis libero autem consequuntur hic esse et veritatis
+                laboriosam reprehenderit labore minus deleniti obcaecati, magni
+                eos pariatur, temporibus quis?
+              </p>
+              <a href="#">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section id="contact">
+      <h2>Контакты</h2>
+      <p>Свяжитесь с нами:</p>
+      <p>По телефону: <a href="tel:+79175138025">+7 (917) 513-80-25</a></p>
+      <p>
+        По электронной почте:
+        <a href="mailto:info@example.com">modern_art_exh@mail.ru</a>
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 The Museum of Modern Art</p>
+      <address>
+        <p>Адрес: г. Москва, ул. Моховая, 13</p>
+        <p>Телефон: <a href="tel:+79175138025">+7 (917) 513-80-25</a></p>
+      </address>
+
+      <div class="icons-container">
+        <div class="img1">
+          <img src="static/images/tgLogo.png" />
+        </div>
+
+        <div class="img3">
+          <img src="static/images/instLogo.png" />
+        </div>
+
+        <div class="img2">
+          <img src="static/images/vkLogo.png" />
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
