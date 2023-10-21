@@ -1026,8 +1026,7 @@ nav ul {
 	}
 }
 
-
-.body-blur-card{
+.body-blur-card {
 	margin: 20px;
 	display: flex;
 	justify-content: center;
@@ -1039,7 +1038,7 @@ nav ul {
 	border-radius: 20px;
 }
 
-.blur-card-container{
+.blur-card-container {
 	position: relative;
 	width: 100%;
 	padding: 20px;
@@ -1049,7 +1048,7 @@ nav ul {
 	flex-wrap: wrap;
 }
 
-.blur-card-container .card{
+.blur-card-container .card {
 	position: relative;
 	width: 300px;
 	height: 420px;
@@ -1061,19 +1060,19 @@ nav ul {
 	transition: 0.5s;
 }
 
-.blur-card-container:hover .card{
+.blur-card-container:hover .card {
 	filter: blur(20px);
 	transform: scale(0.9);
 	opacity: 0.5;
 }
 
-.blur-card-container .card:hover{
+.blur-card-container .card:hover {
 	filter: blur(0px);
 	transform: scale(1.1);
 	opacity: 1;
 }
 
-.blur-card-container .card .circle{
+.blur-card-container .card .circle {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -1082,24 +1081,24 @@ nav ul {
 	text-align: center;
 }
 
-.blur-card-container .card .circle h2{
+.blur-card-container .card .circle h2 {
 	color: #fff;
 	font-size: 4.5em;
 	padding: 30px 0;
 }
 
-.blur-card-container .card .content{
+.blur-card-container .card .content {
 	position: absolute;
 	bottom: 10px;
 	padding: 20px;
 	text-align: center;
 }
 
-.blur-card-container .card .content p{
+.blur-card-container .card .content p {
 	color: #666;
 }
 
-.blur-card-container .card .content a{
+.blur-card-container .card .content a {
 	position: relative;
 	display: inline-block;
 	padding: 10px 20px;
@@ -1111,21 +1110,21 @@ nav ul {
 }
 
 .blur-card-container .card:nth-child(1) .circle,
-.blur-card-container .card:nth-child(1) a{
+.blur-card-container .card:nth-child(1) a {
 	background: #ffaf00;
 }
 
 .blur-card-container .card:nth-child(2) .circle,
-.blur-card-container .card:nth-child(2) a{
+.blur-card-container .card:nth-child(2) a {
 	background: #da2268;
 }
 
 .blur-card-container .card:nth-child(3) .circle,
-.blur-card-container .card:nth-child(3) a{
+.blur-card-container .card:nth-child(3) a {
 	background: #bb02ff;
 }
 
-.body-snake-card{
+.body-snake-card {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -1134,7 +1133,7 @@ nav ul {
 	border-radius: 20px;
 }
 
-.snake-card-container{
+.snake-card-container {
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -1142,7 +1141,7 @@ nav ul {
 	flex-wrap: wrap;
 }
 
-.snake-card-container .card{
+.snake-card-container .card {
 	position: relative;
 	width: 300px;
 	height: 400px;
@@ -1155,15 +1154,15 @@ nav ul {
 	overflow: hidden;
 }
 
-.snake-card-container:hover .card{
+.snake-card-container:hover .card {
 	opacity: 0.2;
 }
 
-.snake-card-container .card:hover{
+.snake-card-container .card:hover {
 	opacity: 1;
 }
 
-.snake-card-container .card::before{
+.snake-card-container .card::before {
 	content: '';
 	position: absolute;
 	top: 2px;
@@ -1174,12 +1173,12 @@ nav ul {
 	pointer-events: none;
 }
 
-.snake-card-container .card .content{
+.snake-card-container .card .content {
 	padding: 30px;
 	text-align: center;
 }
 
-.snake-card-container .card .content h2{
+.snake-card-container .card .content h2 {
 	position: absolute;
 	right: 30px;
 	font-size: 4em;
@@ -1187,15 +1186,15 @@ nav ul {
 	color: #ff6600;
 	z-index: 1;
 	opacity: 0.2;
-	transition: 0.5s;	
+	transition: 0.5s;
 }
 
-.snake-card-container .card:hover .content h2{
+.snake-card-container .card:hover .content h2 {
 	opacity: 1;
 	transform: translateY(-100px);
 }
 
-.snake-card-container .card .content h3{
+.snake-card-container .card .content h3 {
 	position: relative;
 	font-size: 1.5em;
 	color: #fff;
@@ -1205,7 +1204,7 @@ nav ul {
 	transition: 0.5s;
 }
 
-.snake-card-container .card .content p{
+.snake-card-container .card .content p {
 	position: relative;
 	font-size: 1em;
 	color: #fff;
@@ -1217,11 +1216,11 @@ nav ul {
 }
 
 .snake-card-container .card:hover .content h3,
-.snake-card-container .card:hover .content p{
+.snake-card-container .card:hover .content p {
 	opacity: 1;
 }
 
-.snake-card-container .card .content a{
+.snake-card-container .card .content a {
 	display: inline-block;
 	margin-top: 15px;
 	padding: 8px 15px;
@@ -1232,16 +1231,16 @@ nav ul {
 	font-weight: 600;
 }
 
-.snake-card-container .card span{
+.snake-card-container .card span {
 	transition: 0.5s;
 	opacity: 0;
 }
 
-.snake-card-container .card:hover span{
+.snake-card-container .card:hover span {
 	opacity: 1;
 }
 
-.snake-card-container .card span:nth-child(1){
+.snake-card-container .card span:nth-child(1) {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1251,18 +1250,16 @@ nav ul {
 	animation: animate1 2s linear infinite;
 }
 
-@keyframes animate1{
-	0%
-	{
+@keyframes animate1 {
+	0% {
 		transform: translateX(-100%);
 	}
-	100%
-	{
+	100% {
 		transform: translateX(100%);
 	}
 }
 
-.snake-card-container .card span:nth-child(2){
+.snake-card-container .card span:nth-child(2) {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -1270,20 +1267,19 @@ nav ul {
 	height: 100%;
 	background: linear-gradient(to bottom, transparent, #ff9933);
 	animation: animate2 2s linear infinite;
+	animation-delay: -1s;
 }
 
-@keyframes animate2{
-	0%
-	{
+@keyframes animate2 {
+	0% {
 		transform: translateY(-100%);
 	}
-	100%
-	{
+	100% {
 		transform: translateY(100%);
 	}
 }
 
-.snake-card-container .card span:nth-child(3){
+.snake-card-container .card span:nth-child(3) {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -1293,18 +1289,16 @@ nav ul {
 	animation: animate3 2s linear infinite;
 }
 
-@keyframes animate3{
-	0%
-	{
+@keyframes animate3 {
+	0% {
 		transform: translateX(100%);
 	}
-	100%
-	{
+	100% {
 		transform: translateX(-100%);
 	}
 }
 
-.snake-card-container .card span:nth-child(4){
+.snake-card-container .card span:nth-child(4) {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1315,13 +1309,11 @@ nav ul {
 	animation-delay: 1s;
 }
 
-@keyframes animate4{
-	0%
-	{
+@keyframes animate4 {
+	0% {
 		transform: translateY(100%);
 	}
-	100%
-	{
+	100% {
 		transform: translateY(-100%);
 	}
 }
