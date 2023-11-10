@@ -1,34 +1,15 @@
-let registration = prompt('Желаете пройти регистрацию на сайте? (Да/Нет)');
-while (registration.toLowerCase() !== 'да') {
-    alert('Попробуйте ещё раз.');
-    registration = prompt('Желаете пройти регистрацию на сайте? (Да/Нет)');
+function truncate(str, maxlength) {
+if (str.length > maxlength) {
+    return str.slice(0, maxlength - 1) + "…";
+} else {
+    return str;
 }
-alert('Круто!');
-
-function askForLogin() {
-    let login = prompt("Введите логин:");
-    
-    if (login === null) {
-        alert("Отменено");
-    } else if (login === "Админ") {
-        askForPassword();
-    } else if (login === "") {
-        alert("Отменено");
-    } else {
-        alert("Я вас не знаю");
-    }
 }
 
-function askForPassword() {
-    let password = prompt("Введите пароль:");
-    
-    if (password === null) {
-        alert("Отменено");
-    } else if (password === "Я главный") {
-        alert("Здравствуйте!");
-    } else {
-        alert("Неверный пароль");
-    }
-}
+document.addEventListener("DOMContentLoaded", function () {
+var paragraphs = document.querySelectorAll(".snake-card-container .card .content p");
 
-askForLogin();
+paragraphs.forEach(function (paragraph) {
+    paragraph.textContent = truncate(paragraph.textContent, 350);
+});
+});
