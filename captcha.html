@@ -1,133 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Улучшенная капча</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Улучшенная капча</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    #captcha {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    #inputCaptcha {
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    #resultMessage {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Проверка пользователя</h2>
+
+  <div id="captcha"></div>
+  <input type="text" id="inputCaptcha" placeholder="Введите текст капчи" oninput="validateInput()" />
+  <button id="submitButton" onclick="checkCaptcha()" disabled>
+    Проверить
+  </button>
+  <p id="resultMessage"></p>
+
+  <script>
+    let isSecondCaptcha = false
+    let correctAnswer
+
+    function generateCaptcha() {
+      clearInput()
+
+      const characters =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+      let captcha = ""
+
+      if (isSecondCaptcha) {
+        const num1 = Math.floor(Math.random() * 10)
+        const num2 = Math.floor(Math.random() * 10)
+        captcha = `Решите пример: ${num1} + ${num2}`
+        correctAnswer = num1 + num2
+      } else {
+        for (let i = 0; i < 6; i++) {
+          const randomIndex = Math.floor(Math.random() * characters.length)
+          captcha += characters.charAt(randomIndex)
+        }
       }
+      document.getElementById("captcha").textContent = captcha
+    }
 
-      #captcha {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
+    function checkCaptcha() {
+      const userInput = document
+        .getElementById("inputCaptcha")
+        .value.toLowerCase()
+      const captchaText = document
+        .getElementById("captcha")
+        .textContent.toLowerCase()
+      const resultMessage = document.getElementById("resultMessage")
 
-      #inputCaptcha {
-        padding: 5px;
-        font-size: 16px;
-      }
-
-      #resultMessage {
-        margin-top: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <h2>Проверка пользователя (улучшенная капча)</h2>
-
-    <div id="captcha"></div>
-    <input
-      type="text"
-      id="inputCaptcha"
-      placeholder="Введите текст капчи"
-      oninput="validateInput()"
-    />
-    <button id="submitButton" onclick="checkCaptcha()" disabled>
-      Проверить
-    </button>
-    <p id="resultMessage"></p>
-
-    <script>
-      let isSecondCaptcha = false;
-      let correctAnswer;
-
-      function generateCaptcha() {
-        clearInput();
-
-        const characters =
-          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-        let captcha = "";
-
-        if (isSecondCaptcha) {
-          const num1 = Math.floor(Math.random() * 10);
-          const num2 = Math.floor(Math.random() * 10);
-          captcha = `Решите пример: ${num1} + ${num2}`;
-          correctAnswer = num1 + num2;
+      if (isSecondCaptcha) {
+        if (parseInt(userInput) === correctAnswer) {
+          resultMessage.style.color = "green"
+          resultMessage.textContent =
+            "Проверка пройдена! Форма может быть отправлена."
+          window.location.href = "reg_pr10.html"
         } else {
-          for (let i = 0; i < 6; i++) {
-            const randomIndex = Math.floor(Math.random() * characters.length);
-            captcha += characters.charAt(randomIndex);
-          }
+          resultMessage.style.color = "red"
+          resultMessage.textContent =
+            "Неверный ответ на пример. Попробуйте еще раз."
+          generateCaptcha()
         }
-        document.getElementById("captcha").textContent = captcha;
-      }
-
-      function checkCaptcha() {
-        const userInput = document
-          .getElementById("inputCaptcha")
-          .value.toLowerCase();
-        const captchaText = document
-          .getElementById("captcha")
-          .textContent.toLowerCase();
-        const resultMessage = document.getElementById("resultMessage");
-
-        if (isSecondCaptcha) {
-          if (parseInt(userInput) === correctAnswer) {
-            resultMessage.style.color = "green";
-            resultMessage.textContent =
-              "Проверка пройдена! Форма может быть отправлена.";
-            window.location.href = "reg_pr10.html";
-          } else {
-            resultMessage.style.color = "red";
-            resultMessage.textContent =
-              "Неверный ответ на пример. Попробуйте еще раз.";
-            generateCaptcha();
-          }
+      } else {
+        if (userInput === captchaText) {
+          resultMessage.style.color = "green"
+          resultMessage.textContent =
+            "Проверка пройдена! Форма может быть отправлена."
+          window.location.href = "reg_pr10.html"
         } else {
-          if (userInput === captchaText) {
-            resultMessage.style.color = "green";
-            resultMessage.textContent =
-              "Проверка пройдена! Форма может быть отправлена.";
-            window.location.href = "reg_pr10.html";
-          } else {
-            resultMessage.style.color = "red";
-            resultMessage.textContent = "Неверная капча. Попробуйте еще раз.";
-            isSecondCaptcha = true;
-            generateCaptcha();
-          }
-        }
-
-        clearInput();
-      }
-
-      function clearInput() {
-        document.getElementById("inputCaptcha").value = "";
-        document.getElementById("inputCaptcha").focus();
-      }
-
-      generateCaptcha();
-
-      function validateInput() {
-        const userInput = document.getElementById("inputCaptcha").value.trim();
-        const submitButton = document.getElementById("submitButton");
-
-        if (isEmpty(userInput)) {
-          submitButton.disabled = true;
-        } else {
-          submitButton.disabled = false;
+          resultMessage.style.color = "red"
+          resultMessage.textContent = "Неверная капча. Попробуйте еще раз."
+          isSecondCaptcha = true
+          generateCaptcha()
         }
       }
 
-      function isEmpty(obj) {
-        for (let key in obj) {
-          if (obj.hasOwnProperty(key)) return false;
-        }
-        return true;
+      clearInput()
+    }
+
+    function clearInput() {
+      document.getElementById("inputCaptcha").value = ""
+      document.getElementById("inputCaptcha").focus()
+    }
+
+    generateCaptcha()
+
+    function validateInput() {
+      const userInput = document.getElementById("inputCaptcha").value.trim()
+      const submitButton = document.getElementById("submitButton")
+
+      if (isEmpty(userInput)) {
+        submitButton.disabled = true
+      } else {
+        submitButton.disabled = false
       }
-    </script>
-  </body>
+    }
+
+    function isEmpty(obj) {
+      for (let key in obj) {
+        if (obj.hasOwnProperty(key)) return false
+      }
+      return true
+    }
+  </script>
+</body>
+
 </html>

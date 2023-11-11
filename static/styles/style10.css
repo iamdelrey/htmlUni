@@ -197,7 +197,7 @@ body {
 	min-height: 100px;
 	background-color: #3e424b;
 	color: #faf6f2;
-    width: 98.974%;
+	width: 98.974%;
 }
 
 .nav {
@@ -322,7 +322,6 @@ body {
 	.gallery img {
 		width: 100%;
 	}
-
 
 	.content-block {
 		display: block;
@@ -911,454 +910,453 @@ nav ul {
 	}
 }
 
-
 body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
-    min-height: 100vh;
-    margin: 0;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas:
+		'header'
+		'main'
+		'footer';
+	min-height: 100vh;
+	margin: 0;
 }
 
 main {
-    grid-area: main;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-    padding: 20px;
+	grid-area: main;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 20px;
+	padding: 20px;
 }
-  
+
 .header {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    grid-template-areas: 'logo nav notification burger';
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	grid-template-areas: 'logo nav notification burger';
 }
-  
+
 #logo {
-    grid-area: logo;
+	grid-area: logo;
 }
-  
+
 nav {
-    grid-area: nav;
+	grid-area: nav;
 }
 
 .navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-  
+
 .navigation ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
-  
+
 .navigation ul li {
-    display: inline;
-    margin-right: 20px;
+	display: inline;
+	margin-right: 20px;
 }
 
-.grid-container{
-    position: relative;
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-template-rows: minmax(100px, auto);
-    margin-top: 20px;
-    margin-bottom: 20px;
-    grid-auto-flow: dense;
-    grid-gap: 10px;
+.grid-container {
+	position: relative;
+	max-width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-template-rows: minmax(100px, auto);
+	margin-top: 20px;
+	margin-bottom: 20px;
+	grid-auto-flow: dense;
+	grid-gap: 10px;
 }
 
-.grid-container .box{
-    background: #333;
-    padding: 20px;
-    display: grid;
-    font-size: 20px;
-    place-items: center;
-    text-align: center;
-    color: #fff;
-    transition: 0.5s;
+.grid-container .box {
+	background: #333;
+	padding: 20px;
+	display: grid;
+	font-size: 20px;
+	place-items: center;
+	text-align: center;
+	color: #fff;
+	transition: 0.5s;
 }
 
-.grid-container .box:hover{
-    background: #ff6600;
+.grid-container .box:hover {
+	background: #ff6600;
 }
 
-.grid-container .box img{
-    position: relative;
-    max-width: 100px;
-    margin-bottom: 10px;
+.grid-container .box img {
+	position: relative;
+	max-width: 100px;
+	margin-bottom: 10px;
 }
 
-.grid-container .box:nth-child(1){
-    grid-column: span 2;
-    grid-row: span 1;
+.grid-container .box:nth-child(1) {
+	grid-column: span 2;
+	grid-row: span 1;
 }
 
-.grid-container .box:nth-child(2){
-    grid-column: span 1;
-    grid-row: span 2;
+.grid-container .box:nth-child(2) {
+	grid-column: span 1;
+	grid-row: span 2;
 }
 
-.grid-container .box:nth-child(4){
-    grid-column: span 1;
-    grid-row: span 2;
+.grid-container .box:nth-child(4) {
+	grid-column: span 1;
+	grid-row: span 2;
 }
 
-.grid-container .box:nth-child(5){
-    grid-column: span 3;
-    grid-row: span 1;
+.grid-container .box:nth-child(5) {
+	grid-column: span 3;
+	grid-row: span 1;
 }
 
 @media (max-width: 991px) {
-    .grid-container{
-        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-        grid-template-rows: minmax(auto, auto);
-    }
+	.grid-container {
+		grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+		grid-template-rows: minmax(auto, auto);
+	}
 
-    .grid-container .box{
-        grid-column: unset !important;
-        grid-row: unset !important;
-    }
+	.grid-container .box {
+		grid-column: unset !important;
+		grid-row: unset !important;
+	}
 }
 
-.grid-form-container{
-    width: 96.7%;
-    padding: 20px;
-    background: #333;
+.grid-form-container {
+	width: 96.7%;
+	padding: 20px;
+	background: #333;
 }
 
-.grid-form-container h2{
-    width: 100%;
-    color: #ff6600;
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 10px;
+.grid-form-container h2 {
+	width: 100%;
+	color: #ff6600;
+	font-size: 36px;
+	text-align: center;
+	margin-bottom: 10px;
 }
 
-.grid-form-container .row{
-    position: relative;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+.grid-form-container .row {
+	position: relative;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-.grid-form-container .row .col{
-    position: relative;
-    width: 100%;
-    padding: 0 10px;
-    margin: 30px 0 10px;
-    transition: 0.5s;
+.grid-form-container .row .col {
+	position: relative;
+	width: 100%;
+	padding: 0 10px;
+	margin: 30px 0 10px;
+	transition: 0.5s;
 }
 
-.grid-form-container .row .inputBox{
-    position: relative;
-    width: 100%;
-    height: 40px;
-    color: #ff6600;
+.grid-form-container .row .inputBox {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	color: #ff6600;
 }
 
 .grid-form-container .row .inputBox input,
-.grid-form-container .row .inputBox.textarea textarea{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    box-shadow: none;
-    border: none;
-    outline: none;
-    font-size: 18px;
-    padding: 0 10px;
-    z-index: 6;
-    color: #000;
+.grid-form-container .row .inputBox.textarea textarea {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	box-shadow: none;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	padding: 0 10px;
+	z-index: 6;
+	color: #000;
 }
 
-.grid-form-container .row .inputBox .text{
-    position: absolute;
-    top: 0;
-    left: 0;
-    line-height: 40px;
-    font-size: 18px;
-    padding: 0 10px;
-    display: block;
-    transition: 0.5s;
-    pointer-events: none;
+.grid-form-container .row .inputBox .text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	line-height: 40px;
+	font-size: 18px;
+	padding: 0 10px;
+	display: block;
+	transition: 0.5s;
+	pointer-events: none;
 }
 
 .grid-form-container .row .inputBox input:focus + .text,
-.grid-form-container .row .inputBox input:valid + .text{
-    top: -35px;
-    left: -10px;
+.grid-form-container .row .inputBox input:valid + .text {
+	top: -35px;
+	left: -10px;
 }
 
-.grid-form-container .row .inputBox .line{
-    position: absolute;
-    bottom: 0;
-    left: 5px;
-    display: block;
-    width: 92%;
-    height: 2px;
-    background: #ff6600;
-    transition: 0.5s;
-    border-radius: 2px;
-    pointer-events: none;
+.grid-form-container .row .inputBox .line {
+	position: absolute;
+	bottom: 0;
+	left: 5px;
+	display: block;
+	width: 92%;
+	height: 2px;
+	background: #ff6600;
+	transition: 0.5s;
+	border-radius: 2px;
+	pointer-events: none;
 }
 
 .grid-form-container .row .inputBox input:focus ~ .line,
-.grid-form-container .row .inputBox input:valid ~ .line{
-    height: 100%;
+.grid-form-container .row .inputBox input:valid ~ .line {
+	height: 100%;
 }
 
-.grid-form-container .row .inputBox.textarea{
-    position: relative;
-    width: 100%;
-    height: 100px;
-    padding: 10px 0;
+.grid-form-container .row .inputBox.textarea {
+	position: relative;
+	width: 100%;
+	height: 100px;
+	padding: 10px 0;
 }
 
-.grid-form-container .row .inputBox.textarea textarea{
-    height: 100%;
-    resize: none;
+.grid-form-container .row .inputBox.textarea textarea {
+	height: 100%;
+	resize: none;
 }
 
 .grid-form-container .row .inputBox textarea:focus + .text,
-.grid-form-container .row .inputBox textarea:valid + .text{
-    top: -35px;
-    left: -10px;
+.grid-form-container .row .inputBox textarea:valid + .text {
+	top: -35px;
+	left: -10px;
 }
 
 .grid-form-container .row .inputBox textarea:focus ~ .line,
-.grid-form-container .row .inputBox textarea:valid ~ .line{
-    height: 100%;
-    width: 96%;
+.grid-form-container .row .inputBox textarea:valid ~ .line {
+	height: 100%;
+	width: 96%;
 }
 
-input[type="submit"]{
-    border: none;
-    padding: 7px 35px;
-    cursor: pointer;
-    outline: none;
-    background: #ff6600;
-    color: #000;
-    font-size: 18px;
-    border-radius: 2px;
+input[type='submit'] {
+	border: none;
+	padding: 7px 35px;
+	cursor: pointer;
+	outline: none;
+	background: #ff6600;
+	color: #000;
+	font-size: 18px;
+	border-radius: 2px;
 }
 
-footer{
-    position: relative;
-    width: 89.5%;
-    height: auto;
-    padding: 50px 100px;
-    background: #333;
-    grid-area: footer;
+footer {
+	position: relative;
+	width: 89.5%;
+	height: auto;
+	padding: 50px 100px;
+	background: #333;
+	grid-area: footer;
 }
 
-footer .footer-container{
-    width: 87%;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    grid-gap: 20px;
+footer .footer-container {
+	width: 87%;
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr 1fr;
+	grid-gap: 20px;
 }
 
-footer .footer-container .sec h2{
-    position: relative;
-    color: #fff;
-    font-weight: 500;
-    margin: 0;
-    margin-bottom: 15px;
+footer .footer-container .sec h2 {
+	position: relative;
+	color: #fff;
+	font-weight: 500;
+	margin: 0;
+	margin-bottom: 15px;
 }
 
-footer .footer-container .sec h2::before{
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 50px;
-    height: 2px;
-    background: #ff6600;
+footer .footer-container .sec h2::before {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 50px;
+	height: 2px;
+	background: #ff6600;
 }
 
-footer .footer-container .sec ul{
-    padding: 0;
+footer .footer-container .sec ul {
+	padding: 0;
 }
 
-footer .footer-container .sec p{
-    color: #fff;
-    margin: 0;
+footer .footer-container .sec p {
+	color: #fff;
+	margin: 0;
 }
 
-.sci{
-    margin-top: 20px;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(4, 50px);
-    grid-gap: 10px
+.sci {
+	margin-top: 20px;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(4, 50px);
+	grid-gap: 10px;
 }
 
-.sci li{
-    list-style: none;
+.sci li {
+	list-style: none;
 }
 
-.sci li a{
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    background: #ff6600;
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    text-decoration: none;
-    border-radius: 4px;
+.sci li a {
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	background: #ff6600;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	text-decoration: none;
+	border-radius: 4px;
 }
 
-.sci li a:hover{
-    background: #fff;
+.sci li a:hover {
+	background: #fff;
 }
 
-.sci li a .fa{
-    color: #333;
-    font-size: 20px;
+.sci li a .fa {
+	color: #333;
+	font-size: 20px;
 }
 
-.quicklinks{
-    position: relative;
+.quicklinks {
+	position: relative;
 }
 
-.quicklinks li{
-    list-style: none;
+.quicklinks li {
+	list-style: none;
 }
 
-.quicklinks li a{
-    color: #fff;
-    text-decoration: none;
-    margin-bottom: 10px;
-    display: inline-block;
+.quicklinks li a {
+	color: #fff;
+	text-decoration: none;
+	margin-bottom: 10px;
+	display: inline-block;
 }
 
-.quicklinks li a:hover{
-    color: #ff6600;
+.quicklinks li a:hover {
+	color: #ff6600;
 }
 
-.info{
-    position: relative;
+.info {
+	position: relative;
 }
 
-.info li{
-    display: grid;
-    grid-template-columns: 30px 1fr;
-    margin-bottom: 16px;
+.info li {
+	display: grid;
+	grid-template-columns: 30px 1fr;
+	margin-bottom: 16px;
 }
 
-.info li span:nth-child(1){
-    color: #fff;
-    font-size: 20px;
+.info li span:nth-child(1) {
+	color: #fff;
+	font-size: 20px;
 }
 
-.info li span{
-    color: #fff;
+.info li span {
+	color: #fff;
 }
 
-.info a{
-    color: #fff;
-    text-decoration: none;
+.info a {
+	color: #fff;
+	text-decoration: none;
 }
 
-.info a:hover{
-    color: #ff6600;
+.info a:hover {
+	color: #ff6600;
 }
 
-.copyrightText{
-    width: 89.5%;
-    background: #2b2b2b;
-    padding: 8px 100px;
-    text-align: center;
-    color: #fff;
+.copyrightText {
+	width: 89.5%;
+	background: #2b2b2b;
+	padding: 8px 100px;
+	text-align: center;
+	color: #fff;
 }
 
-.copyrightText p{
-    margin: 0;
+.copyrightText p {
+	margin: 0;
 }
 
-@media (max-width: 991px){
-    footer{
-        padding: 40px;
-        width: 91.2%;
-    }
+@media (max-width: 991px) {
+	footer {
+		padding: 40px;
+		width: 91.2%;
+	}
 
-    footer .footer-container{
-        grid-template-columns: repeat(2, 1fr);
-    }
+	footer .footer-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
 
-    .copyrightText{
-        padding: 8px 40px;
-        width: 91.2%;
-    }
-    .header{
-        width: 97.3%;
-    }
+	.copyrightText {
+		padding: 8px 40px;
+		width: 91.2%;
+	}
+	.header {
+		width: 97.3%;
+	}
 
-    .grid-form-container{
-        width: 95.5%;
-    }
+	.grid-form-container {
+		width: 95.5%;
+	}
 }
 
-@media (max-width: 768px){
-    footer .footer-container{
-        grid-template-columns: repeat(1, 1fr);
-    }
+@media (max-width: 768px) {
+	footer .footer-container {
+		grid-template-columns: repeat(1, 1fr);
+	}
 
-    .copyrightText{
-        padding: 8px 40px;
-    }
+	.copyrightText {
+		padding: 8px 40px;
+	}
 
-    footer .footer-container .sec h2{
-        text-align: left;
-    }
+	footer .footer-container .sec h2 {
+		text-align: left;
+	}
 }
 
 .btns {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: #333;
-    border-radius: 16px;
-    width: 100px;
-    height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	background-color: #333;
+	border-radius: 16px;
+	width: 100px;
+	height: 60px;
 }
 
 .btn {
-    height: 60px;
-    background: transparent;
-    border: none;
-    margin: 0 5px; 
-    font-size: 40px;
-    outline: none;
-    color: grey;
-    display: flex;
-    align-items: center;
+	height: 60px;
+	background: transparent;
+	border: none;
+	margin: 0 5px;
+	font-size: 40px;
+	outline: none;
+	color: grey;
+	display: flex;
+	align-items: center;
 }
 
 .btn i:hover {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 #like-count {
 	margin-left: 9px;
-    font-size: 20px;
+	font-size: 20px;
 }
 
-.like-btn a{
+.like-btn a {
 	border: none;
 	padding: 7px 35px;
 	cursor: pointer;
