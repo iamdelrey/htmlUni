@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      select,
+      button {
+        margin-bottom: 20px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        background-color: #ddd;
+        margin-bottom: 5px;
+        padding: 10px;
+        border-radius: 4px;
+        cursor: move;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Сортировка элементов</h1>
+      <label for="sort">Выберите порядок сортировки:</label>
+      <select id="sort">
+        <option value="asc">По возрастанию</option>
+        <option value="desc">По убыванию</option>
+      </select>
+      <button onclick="sortArray()">Сортировать</button>
+      <ul id="sortable-list">
+        <!-- Здесь будут элементы для сортировки -->
+      </ul>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        initializeList();
+      });
+
+      function initializeList() {
+        const sortableList = document.getElementById("sortable-list");
+        const items = [5, 2, 8, 1, 6]; // Пример массива чисел, который вы можете изменить
+
+        items.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          li.draggable = true;
+          li.addEventListener("dragstart", handleDragStart);
+          sortableList.appendChild(li);
+        });
+      }
+
+      function handleDragStart(e) {
+        e.dataTransfer.setData("text/plain", e.target.textContent);
+      }
+
+      function sortArray() {
+        const sortOrder = document.getElementById("sort").value;
+        const sortableList = document.getElementById("sortable-list");
+        const items = Array.from(sortableList.children);
+
+        items.sort((a, b) => {
+          const valueA = parseInt(a.textContent);
+          const valueB = parseInt(b.textContent);
+
+          if (sortOrder === "asc") {
+            return valueA - valueB;
+          } else {
+            return valueB - valueA;
+          }
+        });
+
+        items.forEach((item) => sortableList.appendChild(item));
+      }
+    </script>
+  </body>
+</html>

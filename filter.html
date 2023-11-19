@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        margin: 50px;
+        background-color: #f4f4f4;
+      }
+
+      label {
+        font-size: 18px;
+        display: block;
+        margin-bottom: 8px;
+        color: #333;
+      }
+
+      input {
+        padding: 10px;
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 16px;
+      }
+
+      button {
+        padding: 12px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      #result {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #333;
+      }
+    </style>
+    <script>
+      function handleArrayInput(event) {
+        var inputElement = event.target;
+        var inputValue = inputElement.value;
+
+        inputValue = inputValue.replace(/[^0-9, ]/g, "");
+
+        inputValue = inputValue.replace(/,/g, " ");
+
+        inputElement.value = inputValue;
+      }
+
+      function filterArray() {
+        var a = parseFloat(document.getElementById("aInput").value);
+        var b = parseFloat(document.getElementById("bInput").value);
+        var inputArray = document
+          .getElementById("arrayInput")
+          .value.split(" ")
+          .map(Number);
+        var resultArray = inputArray.filter(function (element) {
+          return element >= a && element <= b;
+        });
+        document.getElementById("result").textContent =
+          "Результат: " + resultArray;
+      }
+    </script>
+  </head>
+  <body>
+    <div
+      style="
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      "
+    >
+      <label for="arrayInput">Введите массив чисел:</label>
+      <input
+        type="text"
+        id="arrayInput"
+        placeholder="Пример: 1, 5, 10, 15"
+        oninput="handleArrayInput(event)"
+      />
+      <label for="aInput">Введите значение a:</label>
+      <input type="text" id="aInput" placeholder="Пример: 5" />
+      <label for="bInput">Введите значение b:</label>
+      <input type="text" id="bInput" placeholder="Пример: 15" />
+      <button onclick="filterArray()">Применить фильтр</button>
+      <div id="result"></div>
+    </div>
+  </body>
+</html>
