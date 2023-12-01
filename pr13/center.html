@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="centerContainer">
+      <img
+        id="centerImage"
+        src="static/images/black-sea.png"
+        alt="Centered Image"
+      />
+    </div>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", (event) => {
+        const centerContainer = document.getElementById("centerContainer");
+        const centerImage = document.getElementById("centerImage");
+
+        function centerElement() {
+          const containerWidth = window.innerWidth;
+          const containerHeight = window.innerHeight;
+          const imageWidth = centerImage.width;
+          const imageHeight = centerImage.height;
+
+          const leftOffset = (containerWidth - imageWidth) / 2;
+          const topOffset = (containerHeight - imageHeight) / 2;
+
+          centerContainer.style.position = "absolute";
+          centerContainer.style.left = leftOffset + "px";
+          centerContainer.style.top = topOffset + "px";
+        }
+
+        window.addEventListener("resize", centerElement);
+        centerElement();
+
+        window.addEventListener("click", (event) => {
+          const clickX = event.clientX;
+          const clickY = event.clientY;
+          console.log(
+            "Clicked at coordinates: (" + clickX + ", " + clickY + ")"
+          );
+
+          // Увеличение размера картинки при каждом клике
+          const currentWidth = centerImage.width;
+          const currentHeight = centerImage.height;
+          const newWidth = currentWidth * 1.2; // Увеличение на 20%
+          const newHeight = currentHeight * 1.2; // Увеличение на 20%
+          centerImage.style.width = newWidth + "px";
+          centerImage.style.height = newHeight + "px";
+
+          // Перерасчет центрирования после изменения размера
+          centerElement();
+        });
+      });
+    </script>
+  </body>
+</html>
