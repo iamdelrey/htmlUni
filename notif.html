@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Функция showNotification</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(
+          to bottom,
+          white 33%,
+          #0052a5 33%,
+          #0052a5 66%,
+          red 66%
+        );
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      button {
+        padding: 15px 20px;
+        font-size: 16px;
+        background-color: #0052a5;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #003366;
+      }
+
+      .notification {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        padding: 15px;
+        background-color: #0052a5;
+        color: white;
+        border-radius: 5px;
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button onclick="showNotification({ content: 'я руский' })">
+      Показать уведомление
+    </button>
+
+    <script>
+      function showNotification(options) {
+        const { content } = options;
+        const notification = document.createElement("div");
+        notification.className = "notification";
+        notification.textContent = content;
+
+        document.body.appendChild(notification);
+
+        // Показываем уведомление
+        notification.style.display = "block";
+
+        // Автоматически скрываем уведомление через 1,5 секунды
+        setTimeout(function () {
+          notification.style.display = "none";
+          document.body.removeChild(notification);
+        }, 1500);
+      }
+    </script>
+  </body>
+</html>

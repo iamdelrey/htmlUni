@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>аааа????</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 20px;
+        text-align: center;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 20px 0;
+      }
+
+      li {
+        opacity: 0;
+        transform: translateY(-20px);
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.5s, opacity 0.5s;
+        cursor: pointer;
+      }
+
+      li.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      li:hover:nth-child(1) {
+        background-color: #f2f2f2;
+      }
+
+      li:hover:nth-child(2) {
+        background-color: rgb(5, 109, 245);
+      }
+
+      li:hover:nth-child(3) {
+        background-color: rgb(245, 33, 5);
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 200px;
+        margin-top: 10px;
+        display: none;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        to {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+      }
+
+      li.fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+
+      li.fade-out {
+        animation: fadeOut 0.5s ease-in-out;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Интерфейс для создания списка</h2>
+    <ul id="myList"></ul>
+    <img id="myImage" src="static/images/easterEgg.jpg" alt="Картинка" />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const myList = document.getElementById("myList");
+        const myImage = document.getElementById("myImage");
+
+        function createListItem() {
+          const userInput = prompt(
+            "Введите содержимое для нового пункта списка:",
+            ""
+          );
+
+          if (userInput !== null && userInput !== "") {
+            const listItem = document.createElement("li");
+            listItem.textContent = userInput;
+            myList.appendChild(listItem);
+
+            listItem.classList.add("fade-in", "active");
+
+            listItem.addEventListener("click", function () {
+              if (listItem === myList.lastElementChild) {
+                myImage.style.display = "block";
+              }
+            });
+
+            createListItem();
+          }
+        }
+
+        createListItem();
+      });
+    </script>
+  </body>
+</html>

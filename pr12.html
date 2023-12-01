@@ -1,110 +1,117 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Моя первая страница</title>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Моя первая страница</title>
+    <link rel="icon" href="static/images/fvcFinal.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="static/styles/style12.css" />
 
-	<link rel="icon" href="static/images/fvcFinal.jpg" type="image/x-icon" />
-	<link rel="stylesheet" href="static/styles/style12.css" />
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-	<script src='script.js'></script>
-	<link rel="preconnect" href="https://fonts.gstatic.com" />
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-</head>
+  <body>
+    <div>
+      <header>
+        <img
+          src="static/images/logo.jpg"
+          width="70"
+          alt="Modern art exhibition"
+          id="logo"
+        />
+        <input type="checkbox" id="menu-toggle" class="hidden-checkbox" />
+        <label for="menu-toggle" id="menu-burger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </label>
+        <nav>
+          <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#exhibition">Выставка</a></li>
+            <li><a href="#contact">Контакты</a></li>
+            <li><a href="inter.html">Интерфейс</a></li>
+            <li><a href="notif.html">Уведы</a></li>
+          </ul>
+        </nav>
 
-<body>
-	<div>
-		<header>
-			<img src="static/images/logo.jpg" width="70" alt="Modern art exhibition" id="logo" />
-			<input type="checkbox" id="menu-toggle" class="hidden-checkbox" />
-			<label for="menu-toggle" id="menu-burger">
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-			</label>
-			<nav>
-				<ul>
-					<li><a href="#home">Главная</a></li>
-					<li><a href="#exhibition">Выставка</a></li>
-					<li><a href="#contact">Контакты</a></li>
-				</ul>
-			</nav>
+        <div class="notification">
+          <span class="notification-icon">🔔</span>
+          <span class="notification-count">3</span>
+          <div class="notification-list">
+            <ul></ul>
+          </div>
+        </div>
+      </header>
+    </div>
 
-			<div class="notification">
-				<span class="notification-icon">🔔</span>
-				<span class="notification-count">3</span>
-				<div class="notification-list">
-					<ul>
-					</ul>
-				</div>
-			</div>
-		</header>
-	</div>
+    <main>
+      <h1>Выставка современного искусства</h1>
 
-	<main>
-		<h1>Выставка современного искусства</h1>
+      <section id="home">
+        <h2>Содержание</h2>
+        <ol type="I">
+          <li><b>Живопись</b></li>
+          <li>Натюрморт</li>
+          <li>
+            Скульптура
+            <ul>
+              <li><i>Абстрактная скульптура</i></li>
+              <li><em>Фигуративная скульптура</em></li>
+              <li><u>Портретная скульптура</u></li>
+            </ul>
+          </li>
+        </ol>
+      </section>
 
-		<section id="home">
-			<h2>Содержание</h2>
-			<ol type="I">
-				<li><b>Живопись</b></li>
-				<li>Натюрморт</li>
-				<li>
-					Скульптура
-					<ul>
-						<li><i>Абстрактная скульптура</i></li>
-						<li><em>Фигуративная скульптура</em></li>
-						<li><u>Портретная скульптура</u></li>
-					</ul>
-				</li>
-			</ol>
-		</section>
+      <section>
+        <h2>Термины</h2>
+        <dl>
+          <div>
+            <dt><abbr title="Абстрактное искусство">Абстракция</abbr></dt>
+            <dd>
+              <cite
+                >Стиль искусства, который не стремится изображать точное
+                представление внешнего мира</cite
+              >
+            </dd>
+          </div>
+          <dt><abbr title="Фигуративное искусство">Фигурация</abbr></dt>
+          <dd>
+            Стиль искусства, который преимущественно ориентирован на
+            реалистичное изображение объектов
+          </dd>
 
-		<section>
-			<h2>Термины</h2>
-			<dl>
-				<div>
-					<dt><abbr title="Абстрактное искусство">Абстракция</abbr></dt>
-					<dd>
-						<cite>Стиль искусства, который не стремится изображать точное
-							представление внешнего мира</cite>
-					</dd>
-				</div>
-				<dt><abbr title="Фигуративное искусство">Фигурация</abbr></dt>
-				<dd>
-					Стиль искусства, который преимущественно ориентирован на
-					реалистичное изображение объектов
-				</dd>
+          <dt>Акционизм</dt>
+          <dd>Искусство, которое заключается в действиях самого художника.</dd>
+          <dt>Нонконформизм</dt>
+          <dd>Искусство, противостоящее установкам официальной власти.</dd>
+        </dl>
+      </section>
+    </main>
 
-				<dt>Акционизм</dt>
-				<dd>Искусство, которое заключается в действиях самого художника.</dd>
-				<dt>Нонконформизм</dt>
-				<dd>Искусство, противостоящее установкам официальной власти.</dd>
-			</dl>
-		</section>
+    <section id="contact">
+      <h2>Контакты</h2>
+      <p>Свяжитесь с нами:</p>
+      <p>По телефону: <a href="tel:+79175138025">+7 (917) 513-80-25</a></p>
+      <p>
+        По электронной почте:
+        <a href="mailto:info@example.com">modern_art_exh@mail.ru</a>
+      </p>
+    </section>
 
-
-	</main>
-
-	<section id="contact">
-		<h2>Контакты</h2>
-		<p>Свяжитесь с нами:</p>
-		<p>По телефону: <a href="tel:+79175138025">+7 (917) 513-80-25</a></p>
-		<p>
-			По электронной почте:
-			<a href="mailto:info@example.com">modern_art_exh@mail.ru</a>
-		</p>
-	</section>
-
-	<footer>
-		<p>&copy; 2023 The Museum of Modern Art</p>
-		<address>
-			<p>Адрес: г. Москва, ул. Моховая, 13</p>
-			<p>Телефон: <a href="tel:+79175138025">+7 (917) 513-80-25</a></p>
-		</address>
-	</footer>
-</body>
-
+    <footer>
+      <p>&copy; 2023 The Museum of Modern Art</p>
+      <address>
+        <p>Адрес: г. Москва, ул. Моховая, 13</p>
+        <p>Телефон: <a href="tel:+79175138025">+7 (917) 513-80-25</a></p>
+      </address>
+    </footer>
+  </body>
 </html>
