@@ -64,11 +64,8 @@
         notification.textContent = content;
 
         document.body.appendChild(notification);
-
-        // Показываем уведомление
         notification.style.display = "block";
 
-        // Автоматически скрываем уведомление через 1,5 секунды
         setTimeout(function () {
           notification.style.display = "none";
           document.body.removeChild(notification);

@@ -1,42 +1,65 @@
-document.addEventListener('DOMContentLoaded', function () {
-	const notification = document.querySelector('.notification')
-	const notificationCount = document.querySelector('.notification-count')
-	const notificationList = document.querySelector('.notification-list ul')
+document.addEventListener("DOMContentLoaded", function () {
+  const notificationList = document.querySelector(".notification-list ul");
+  const notificationCount = document.querySelector(".notification-count");
+  const pauseButton = document.getElementById("pauseButton");
+  const timerElement = document.getElementById("timer");
 
-	let newNotificationsCount = 0
-	let isCounterPaused = false
+  let counter = 1;
+  let isPaused = false;
+  let remainingTime = 10;
 
-	function addNotification() {
-		if (!isCounterPaused) {
-			newNotificationsCount++
-			notificationCount.innerText = newNotificationsCount
+  function updateNotificationCount() {
+    notificationCount.textContent = counter;
+  }
 
-			const newNotification = document.createElement('li')
-			newNotification.innerText = 'Новое уведомление ' + newNotificationsCount
-			notificationList.appendChild(newNotification)
-		}
-	}
+  function updateTimer() {
+    timerElement.textContent = remainingTime;
+  }
 
-	function updateNotifications() {
-		setInterval(addNotification, 3000)
-	}
+  function addNotification() {
+    if (!isPaused) {
+      updateNotificationCount();
+      const notification = document.createElement("li");
+      notification.textContent = `Новое уведомление ${counter}`;
+      notificationList.appendChild(notification);
+      counter++;
+    }
+  }
 
-	function pauseCounterFor(seconds) {
-		isCounterPaused = true
-		setTimeout(() => {
-			isCounterPaused = false
-		}, seconds * 1000)
-	}
+  function notificationDecorator(originalFunction) {
+    return function () {
+      if (!isPaused) {
+        updateNotificationCount();
+        originalFunction.apply(this, arguments);
+      }
+    };
+  }
 
-	notification.addEventListener('mouseover', function () {
-		newNotificationsCount = 0
-		notificationCount.innerText = newNotificationsCount
-	})
+  addNotification = notificationDecorator(addNotification);
 
-	notification.addEventListener('click', function () {
-		notificationList.innerHTML = ''
-		pauseCounterFor(10)
-	})
+  const intervalId = setInterval(function () {
+    addNotification();
+    updateTimer();
+  }, 3000);
 
-	updateNotifications()
-})
+  pauseButton.addEventListener("click", function () {
+    isPaused = true;
+    timerElement.style.display = "inline";
+
+    const timerIntervalId = setInterval(function () {
+      remainingTime--;
+      updateTimer();
+
+      if (remainingTime <= 0) {
+        clearInterval(timerIntervalId);
+        isPaused = false;
+        timerElement.style.display = "none";
+        remainingTime = 10;
+      }
+    }, 1000);
+  });
+
+  setTimeout(function () {
+    clearInterval(intervalId);
+  }, 30000);
+});
