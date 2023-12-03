@@ -48,15 +48,13 @@
             "Clicked at coordinates: (" + clickX + ", " + clickY + ")"
           );
 
-          // Увеличение размера картинки при каждом клике
           const currentWidth = centerImage.width;
           const currentHeight = centerImage.height;
-          const newWidth = currentWidth * 1.2; // Увеличение на 20%
-          const newHeight = currentHeight * 1.2; // Увеличение на 20%
+          const newWidth = currentWidth * 1.2;
+          const newHeight = currentHeight * 1.2;
           centerImage.style.width = newWidth + "px";
           centerImage.style.height = newHeight + "px";
 
-          // Перерасчет центрирования после изменения размера
           centerElement();
         });
       });

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Динамическое обновление при прокрутке</title>
+    <style>
+      body {
+        height: 1300px;
+      }
+
+      #content {
+        margin-top: 500px;
+        font-size: 100px;
+        text-align: left;
+      }
+
+      .cat {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+
+      .cat img {
+        width: auto;
+        height: 400px;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <p>Начало</p>
+      <div class="cat" id="cutie"></div>
+    </div>
+
+    <script>
+      function handleScroll() {
+        var scrollPosition = window.scrollY;
+
+        if (scrollPosition + window.innerHeight >= document.body.scrollHeight) {
+          var cutie = document.getElementById("cutie");
+
+          var newImage = document.createElement("img");
+          newImage.src = "static/images/gypsy.jpg";
+          newImage.alt = "Artwork";
+          cutie.appendChild(newImage);
+        }
+      }
+
+      window.addEventListener("scroll", handleScroll);
+    </script>
+  </body>
+</html>
