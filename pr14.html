@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Image Gallery</title>
+  </head>
+  <body>
+    <p class="fade-in">Задание 1</p>
+    <div id="contents">
+      <a href="https://github.com/iamdelrey">Гитхаб</a>
+    </div>
+    <p class="fade-in">Задание 2</p>
+    <div class="gallery-container">
+      <img
+        src="static/images/cutie.webp"
+        alt="Image 1"
+        class="thumbnail"
+        onclick="changeImage('static/images/cutie.webp')"
+      />
+      <img
+        src="static/images/comfy.jpg"
+        alt="Image 2"
+        class="thumbnail"
+        onclick="changeImage('static/images/comfy.jpg')"
+      />
+      <img
+        src="static/images/cozy.jpg"
+        alt="Image 3"
+        class="thumbnail"
+        onclick="changeImage('static/images/cozy.jpg')"
+      />
+      <img
+        src="static/images/painting.jpg"
+        alt="Image 4"
+        class="thumbnail"
+        onclick="changeImage('static/images/painting.jpg')"
+      />
+      <img
+        src="static/images/sunflower.jpg"
+        alt="Image 5"
+        class="thumbnail"
+        onclick="changeImage('static/images/sunflower.jpg')"
+      />
+    </div>
+
+    <div class="main-image-container">
+      <img
+        src="static/images/sunflower.jpg"
+        alt="Main Image"
+        class="main-image"
+        id="mainImage"
+      />
+    </div>
+    <p class="fade-in">Задание 3</p>
+    <ul class="selectable-list" id="myList">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+    </ul>
+    <p class="fade-in">Задание 4</p>
+
+    <div class="slider">
+      <div class="track" id="track">
+        <div class="handle" id="handle"></div>
+      </div>
+    </div>
+    <p class="fade-in">Задание 5</p>
+    <div class="content-container">
+      <div id="products-container" onclick="startScaling()">
+        <div
+          class="product"
+          draggable="true"
+          ondragstart="drag(event)"
+          data-price="50"
+          data-name="Товар 1"
+        >
+          Товар 1 - $50
+        </div>
+        <div
+          class="product"
+          draggable="true"
+          ondragstart="drag(event)"
+          data-price="100"
+          data-name="Товар 2"
+        >
+          Товар 2 - $100
+        </div>
+        <div
+          class="product"
+          draggable="true"
+          ondragstart="drag(event)"
+          data-price="250"
+          data-name="Товар 3"
+        >
+          Товар 3 - $250
+        </div>
+      </div>
+
+      <div
+        id="cart"
+        onclick="startAnimation()"
+        ondragover="allowDrop(event)"
+        ondrop="drop(event)"
+        class="fade-in"
+      >
+        <p id="cart_p">Корзина</p>
+        <ul id="cartItems"></ul>
+        <div class="totalSum">
+          <p>Итого: $<span id="total">0</span></p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
